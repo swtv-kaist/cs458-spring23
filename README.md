@@ -14,7 +14,7 @@
 
 - Teaching assistants: TBD
 
-- Lecture hours: Tue/Thur 2:30 - 3:45 PM
+- Lecture hours: Tue/Thur 4:00 - 5:30 PM
 
 - Lecture room: E3 Rm#1101 (and through Zoom)
   - I plan to make a face-to-face lecture on Tues and an online lecture on Thurs (this plan may change later depending on the academic performance of the class participants).
