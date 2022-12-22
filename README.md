@@ -74,19 +74,18 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 “It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free.”— Steve McConnell
 
-- Mar 9: Graph coverage [pdf]
+- Mar 9: [Graph coverage](2-coverage/lec4-graph_coverage-v4.pptx)
 
   - Intro to Software Testing web site
   - "An Experimental Comparison of Four Unit Test Criteria: Mutation, Edge-Pair, All-uses and Prime Path Coverage" by Nan Li et al. '09 Intl. Conf. on Software Testing, Verification, and Validation Workshops
 
-- Mar 14: Graph coverage for source code [pdf]
+- Mar 14: [Graph coverage for source code](2-coverage/lec5-graph-coverage-code.pptx)
   - Generating CFG using GCC and Graphviz [pdf] http://www.webgraphviz.com/
    - Cyclometic complexity (또다른 한글문서) https://www.guru99.com/cyclomatic-complexity.html
 
-- Sep 20: gcov tutorial [pdf], CLang tutorial 1/2: Clang AST [pdf]
+- Sep 20: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx), [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx)
    - gcov manual, clang for LLVM, Clang tutorial (code)
-- Sep 22: Clang tutorial 2/2: a program analysis tool by using Clang [pdf]
-
+- Sep 22: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx)
   - PrintFunction.zip
   - clang_example.c
 
