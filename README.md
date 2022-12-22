@@ -59,7 +59,7 @@ The class aims to teach practical applications of advanced testing/verification 
 
 - Feb 28 : [Introduction](part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx)
 
-- Feb 28 : <a href="part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx" download> Introduction </a>
+- Feb 28 : <a href="part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx" download> Introduction2 </a>
 
 - Mar 2 : Necessity for systematic & automated testing techniques [pdf]
 
