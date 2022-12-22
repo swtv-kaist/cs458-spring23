@@ -53,6 +53,8 @@ The class aims to teach practical applications of advanced testing/verification 
 
 - Feb 28 : Introduction [pdf]
 
+[lec1-Intro-AutomatedSWAnalysis_v11.pptx](https://github.com/swtv-kaist/cs458-spring23/files/10287548/lec1-Intro-AutomatedSWAnalysis_v11.pptx)
+
 - Mar 2 : Necessity for systematic & automated testing techniques [pdf]
 
   - "Variability and Reproducibility in Software Engineering: A Study of Four Companies that Developed the Same System" by Anda et al.
