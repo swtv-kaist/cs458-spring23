@@ -90,9 +90,35 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 -  : Mutation testing [pdf],  Q&A session for coverage guided whitebox testing
   - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
- 
 
-### Part III: Model checking and test oracles
+### Part III: Automated test generation (fuzzing and concolic testing (a.k.a., dynamic symbolic execution))
+- : Modern fuzzing overview  
+
+- : AFL tutorial
+
+- Nov 8 : Automated SW analysis for high reliability: a Concolic testing approach
+  - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
+
+- Nov 10: no class
+
+- Nov 15: no class
+
+- Nov 17: CROWN tutorial
+  - triangle.c example
+
+- Nov 22, 24: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
+  - crown_examples.zip
+  - cbmc-memory-model-example.zip
+
+- Nov 29: System-level concolic testing: Busybox application examples through CROWN
+
+- Dec 1 (Makeup class 1): Automated unit testing, Unit-level concolic testing: Busybox ls example
+
+- Online makeup class 2 (pre-recorded movie clip):
+  - Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing [ASE'13 paper] [Movie (40 min)]
+  - Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry [ICSE'19 paper] [Movie (35min)]
+
+### Part IV: Model checking and test oracles
 
 - Oct 11, 13: SAT-based bounded software model checking [pdf]
   - The importance of unwinding loop bound: SAT-based Bounded Software Model Checking for Embedded Software: A Case Study, APSEC 2014 by Kim et al
@@ -108,32 +134,6 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - Nov 3: Verification of the multi-sector read of flash memory storage
  
-
-### Part IV: Concolic testing (a.k.a., dynamic symbolic execution)
-
-- Nov 8 : Automated SW analysis for high reliability: a Concolic testing approach
-  - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
-
-- Nov 10: no class
-
-- Nov 15: no class
-
-- Nov 17: CROWN Tutorial
-  - triangle.c example
-
-- Nov 22, 24: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
-  - crown_examples.zip
-  - cbmc-memory-model-example.zip
-
-- Nov 29: System-level concolic testing: Busybox application examples through CROWN
-
-- Dec 1 (Makeup class 1): Automated unit testing, Unit-level concolic testing: Busybox ls example
-
-- Online makeup class 2 (pre-recorded movie clip):
-  - Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing [ASE'13 paper] [Movie (40 min)]
-  - Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry [ICSE'19 paper] [Movie (35min)]
-
-
 ### Part V: Verification engine - SAT/SMT solver
 
 - Dec 6: SMTlib tutorial, SMTlib web page, First order theories [pdf]
