@@ -26,17 +26,22 @@
   
 - Grading: attendance/class participation/quiz: 20%, HW: 50%, mid/final exams:30%
   - You should turn on your web cam when you participate an online class; class attendance will not be counted otherwise.
+  - More than 7 absences of the class will get F grade
+  - Late attendance shall be counted as 1/3 absence. If a student is not able to attend a class due to an important event (e.g., attending conf., etc.), he/she should submit 1 week prior notice to the professor.
+  - The official language in the class is English. All students should submit all written documents such as homework, project reports, exam, etc. in English; 20% penalty of the max score otherwise.  
+
+- Homework:
   - Late HW will be accepted with 10% penalty of the max score in 1 day, 30% penalty of the max score in 3 days. HW will not be accepted after then.
     - Hint: many questions of exams are from the homework.
-   - All programming HWs you submit must be able to be replayed by executing a single script file on a TA's server account (i.e., submitted HW should not have a dependency on your home directory, environment, etc.).  Also, the replayed execution must demonstrate the same output to the submitted hw. You will get 10% penalty of the max score otherwise.
-     - For your programming HWs, you should not use external libraries which are not available on the server machines.  If you really need an external library, you have to ask TAs to install it on the server machines.
-   - More than 7 absences of the class will get F grade
-   - Late attendance shall be counted as 1/3 absence. If a student is not able to attend a class due to an important event (e.g., attending conf., etc.), he/she should submit 1 week prior notice to the professor.
-   - The official language in the class is English. All students should submit all written documents such as homework, project reports, exam, etc. in English; 20% penalty of the max score otherwise.
-   - Homework should be submitted through KLMS https://klms.kaist.ac.kr/mod/courseboard/view.php?id=724212
+  - All programming HWs you submit must be able to be replayed by executing a single script file on a TA's server account (i.e., submitted HW should not have a dependency on your home directory, environment, etc.).  Also, the replayed execution must demonstrate the same output to the submitted hw. You will get 10% penalty of the max score otherwise.
+  - For your programming HWs, you should not use external libraries which are not available on the server machines.  If you really need an external library, you have to ask TAs to install it on the server machines.
+  - Homework should be submitted through KLMS https://klms.kaist.ac.kr/mod/courseboard/view.php?id=724212
+
+- Questions and answers on the course materials and homeworks should be posted as github issues
+
 - Excerpts from 강의평가
-  - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
-  - "과제가 많이 어려운것 같았다. 과제에 대한 도움을 수업에서 좀 더 주었으면 좋겠다."
+    - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
+    - "과제가 많이 어려운것 같았다. 과제에 대한 도움을 수업에서 좀 더 주었으면 좋겠다."
 
 
 
