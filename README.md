@@ -58,6 +58,8 @@ The class aims to teach practical applications of advanced testing/verification 
 “Software testers do not make software; they only make them better.” – Anonymous
 
 - Feb 28 : [Introduction](https://github.com/swtv-kaist/cs458-spring23/files/10287548/lec1-Intro-AutomatedSWAnalysis_v11.pptx)
+- Feb 28 : [Introduction](https://github.com/swtv-kaist/cs458-spring23/files/10287548/lec1-Intro-AutomatedSWAnalysis.pptx)
+
 
 - Mar 2 : Necessity for systematic & automated testing techniques [pdf]
 
