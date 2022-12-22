@@ -37,7 +37,8 @@
   - For your programming HWs, you should not use external libraries which are not available on the server machines.  If you really need an external library, you have to ask TAs to install it on the server machines.
   - Homework should be submitted through KLMS https://klms.kaist.ac.kr/mod/courseboard/view.php?id=724212
 
-- Questions on the course materials and homeworks should be posted as github issues ( https://github.com/swtv-kaist/cs458-spring23/issues )
+- Questions on the course materials and homeworks should be posted as github issues 
+  - https://github.com/swtv-kaist/cs458-spring23/issues 
 
 - Excerpts from 강의평가
     - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
