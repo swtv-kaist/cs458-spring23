@@ -57,9 +57,9 @@ The class aims to teach practical applications of advanced testing/verification 
 
 “Software testers do not make software; they only make them better.” – Anonymous
 
-- Feb 28 : [Introduction](part1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pptx)
+- Feb 28 : [Introduction](part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx)
 
-- Feb 28 : <a href="part1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pptx"> Introduction </a>
+- Feb 28 : <a href="part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx"> Introduction </a>
 
 - Mar 2 : Necessity for systematic & automated testing techniques [pdf]
 
