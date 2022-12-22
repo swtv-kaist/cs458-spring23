@@ -57,16 +57,16 @@ The class aims to teach practical applications of advanced testing/verification 
 
 “Software testers do not make software; they only make them better.” – Anonymous
 
-- Feb 28 : [Introduction](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pdf)
+- Feb 28 : [Introduction](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pptx)[pdf](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pdf)
 
 <!--  Feb 28 : <a href="part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx" download> Introduction2 </a> -->
 
-- Mar 2 : [Necessity for systematic & automated testing techniques](1-overview/lec2-Intro-HighComplexitySW_v8.pdf)
+- Mar 2 : [Necessity for systematic & automated testing techniques](1-overview/lec2-Intro-HighComplexitySW_v8.pptx)[pdf](1-overview/lec2-Intro-HighComplexitySW_v8.pdf)
 
   - "Variability and Reproducibility in Software Engineering: A Study of Four Companies that Developed the Same System" by Anda et al.
 IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
-- Mar 7: [Overview of testing techniques (including the input partitioning technique)](1-overview/lec3-testing-overview-v3.pdf)
+- Mar 7: [Overview of testing techniques (including the input partitioning technique)](1-overview/lec3-testing-overview-v3.pptx) [pdf](1-overview/lec3-testing-overview-v3.pdf)
 
  
 
