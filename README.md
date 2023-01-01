@@ -84,19 +84,17 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - Generating CFG using GCC and Graphviz [pdf] http://www.webgraphviz.com/
    - Cyclometic complexity (또다른 한글문서) https://www.guru99.com/cyclomatic-complexity.html
 
-- Sep 20: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx), [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx)
+- Mar 16: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx), [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx)
    - gcov manual, clang for LLVM, Clang tutorial (code)
-- Sep 22: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx)
+- Mar 21: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx)
   - PrintFunction.zip
   - clang_example.c
 
-- : Logic coverage [pdf]
+- Mar 23: [Logic coverage](2-coverage/lec9-Logic-covearge-v3.pptx)[pdf](2-coverage/lec9-Logic-covearge-v3.pdf)
   - example [pdf]
-- :  Logic coverage from source code [pdf]
+- Mar 28:  [Logic coverage from source code](2-coverage/lec10-logic-covearge-code-v2.pptx) [pdf](2-coverage/lec10-logic-covearge-code-v2.pdf)
 
-- : No class (requested by KAIST)
-
--  : Mutation testing [pdf],  Q&A session for coverage guided whitebox testing
+- Mar 30: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx)[pdf](2-coverage/lec11-mutation-testing-v2.pdf),  Q&A session for coverage guided whitebox testing
   - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
 
 ### Part III: Automated test generation (fuzzing and concolic testing (a.k.a., dynamic symbolic execution))
