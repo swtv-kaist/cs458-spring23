@@ -98,29 +98,28 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
 
 ### Part III: Automated test generation (fuzzing and concolic testing (a.k.a., dynamic symbolic execution))
-- Apr 4: Modern fuzzing overview  
+- Apr 4: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
 
-- Apr 6: AFL tutorial
+- Apr 6: AFL (american fuzzy lop) fuzzer tutorial
 
-- Apr 11: Automated SW analysis for high reliability: a Concolic testing approach
+- Apr 11: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
-- Apr 13, Apr 25: CROWN tutorial
+- Apr 13, Apr 25: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
   - triangle.c example
 
-- Apr 20: Midterm exam
+- **Apr 20: Midterm exam (closed book)**
 
-- Apr 27, May 2: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
+- Apr 27, May 2: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
   - crown_examples.zip
-  - cbmc-memory-model-example.zip
+  
+- May 4: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
 
-- May 4: System-level concolic testing: Busybox application examples through CROWN
-
-- May 9: Automated unit testing, Unit-level concolic testing: Busybox ls example
+- May 9: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
 
 - May 11: Industrial case studies (pre-recorded movie clip)
-  - Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing [ASE'13 paper] [Movie (40 min)]
-  - Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry [ICSE'19 paper] [Movie (35min)]
+  - [Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing](3-fuzz-concolic/lec38-conbol.pptx) [[pdf]](3-fuzz-concolic/lec38-conbol.pdf)  [ASE'13 paper] [[Movie (40 min)]](https://drive.google.com/file/d/10DaVUtSZGJiHhHKe-abez7C3XuFQxoBx/view?usp=share_link)
+  - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [[Movie (35min)]](https://drive.google.com/file/d/1G2j92qvfJBkPvIiBIklYE2EWjadEYIiW/view?usp=share_link)
 
 ### Part IV: Model checking and test oracles
 
@@ -130,7 +129,8 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - May 23: Software model checking examples [pdf]
   - code examples for CBMC
 
-- May 25: Model Checking flash memory storage platform software - an industrial case study
+- May 25: CBMC memory model, Model Checking flash memory storage platform software - an industrial case study
+  - cbmc-memory-model-example.zip
   - "A Comparative Study of Software Model Checkers as Unit Testing Tools: An Industrial Case Study," IEEE Transactions on Software Engineering (TSE), vol 37, no 2, pages 146-160, March 2011
   - "Formal Verification of a Flash Memory Device Driver- an Experience Report" Spin 2008, by M.Kim, Y.Kim, Y.Choi, and H.Kim
 
@@ -150,5 +150,5 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - The SuDoku Puzzle as a Satisfiability Problem
   - SAT-competition 2022
 
-- June 15:  Final exam (closed book)
+- **June 15:  Final exam (closed book)**
 
