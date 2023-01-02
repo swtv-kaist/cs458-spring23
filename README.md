@@ -11,11 +11,11 @@
   - Office: 2434 (located at the east wing of E3-1)
   - Phone:042-350-3543
   - E-mail: moonzoo.kim @ gmail.com
-  - Office hour: Tues 5:30-6:30 PM (reservation e-mail is preferred)
+  - Office hour: Tues 3:00-4:00 PM (reservation e-mail is preferred)
 
 - Teaching assistants: TBD
 
-- Lecture hours: Tue/Thur 2:30 - 3:45 PM
+- Lecture hours: Tue/Thur 4:00 - 5:15 PM
 
 - Lecture room: E3 Rm#1101 (and through Zoom)
   - I plan to make a face-to-face lecture on Tues and an online lecture on Thurs (this plan may change later depending on the academic performance of the class participants).
