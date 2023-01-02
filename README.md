@@ -18,7 +18,7 @@
 - Lecture hours: Tue/Thur 4:00 - 5:15 PM
 
 - Lecture room: E3 Rm#1101 (and through Zoom)
-  - I plan to make a face-to-face lecture on Tues and an online lecture on Thurs (this plan may change later depending on the academic performance of the class participants).
+  - a face-to-face lecture on Tues and an online lecture on Thurs (this plan may change later) 
   - Zoom link for Thurs class: https://kaist.zoom.us/j/5258253316
 
 - Prerequisite: proficiency in C/C++ programming and Linux utilities
@@ -32,19 +32,18 @@
   - The official language in the class is English. All students should submit all written documents such as homework, project reports, exam, etc. in English; 20% penalty of the max score otherwise.  
 
 - Homework:
+  - Homework should be submitted through KLMS https://klms.kaist.ac.kr/mod/courseboard/view.php?id=724212
   - Late HW will be accepted with 10% penalty of the max score in 1 day, 30% penalty of the max score in 3 days. HW will not be accepted after then.
-    - Hint: many questions of exams are from the homework.
+    - Hint: many questions of exams are from the homeworks.
   - All programming HWs you submit must be able to be replayed by executing a single script file on a TA's server account (i.e., submitted HW should not have a dependency on your home directory, environment, etc.).  Also, the replayed execution must demonstrate the same output to the submitted hw. You will get 10% penalty of the max score otherwise.
   - For your programming HWs, you should not use external libraries which are not available on the server machines.  If you really need an external library, you have to ask TAs to install it on the server machines.
-  - Homework should be submitted through KLMS https://klms.kaist.ac.kr/mod/courseboard/view.php?id=724212
-
+  
 - Questions on the course materials and homeworks should be posted as github issues 
   - https://github.com/swtv-kaist/cs458-spring23/issues 
 
 - Excerpts from 강의평가
     - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
     - "과제가 많이 어려운것 같았다. 과제에 대한 도움을 수업에서 좀 더 주었으면 좋겠다."
-
 
 
 ## Syllabus
@@ -56,7 +55,7 @@ The class teaches **practical applications** of testing/verification techniques 
 
 ### Part I: Overview of High SW Complexity and Testing
 
-“Software testers do not make software; they only make them better.” – Anonymous
+*“Software testers do not make software; they only make them better.” – Anonymous*
 
 - Feb 28 : [Introduction](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pptx) [[pdf]](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pdf)
 
@@ -73,7 +72,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 ### Part II: Source Code Coverage Criteria for Effective SW Debugging
 
-“It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free.”— Steve McConnell
+*“It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free.”— Steve McConnell*
 
 - Mar 9: [Graph coverage](2-coverage/lec4-graph_coverage-v4.pptx) [[pdf]](2-coverage/lec4-graph_coverage-v4.pdf)
 
