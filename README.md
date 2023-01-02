@@ -102,7 +102,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - Apr 6: AFL (american fuzzy lop) fuzzer tutorial
 
-- Apr 11: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]] (3-fuzz-concolic/lec31-concolic-v5.pdf)
+- Apr 11: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
 - Apr 13, Apr 25: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
@@ -110,16 +110,16 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - **Apr 20: Midterm exam (closed book)**
 
-- Apr 27, May 2: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]] (3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
+- Apr 27, May 2: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
   - crown_examples.zip
   
-- May 4: [System-level concolic testing: Busybox application examples through CROWN] (3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]] (3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
+- May 4: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
 
-- May 9: [Automated unit testing] (3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]] (3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example] (3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]] (3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
+- May 9: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
 
 - May 11: Industrial case studies (pre-recorded movie clip)
   - [Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing](3-fuzz-concolic/lec38-conbol.pptx) [[pdf]](3-fuzz-concolic/lec38-conbol.pdf)  [ASE'13 paper] [Movie (40 min)]
-  - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]] (3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [Movie (35min)]
+  - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [Movie (35min)]
 
 ### Part IV: Model checking and test oracles
 
