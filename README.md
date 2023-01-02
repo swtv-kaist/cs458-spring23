@@ -11,11 +11,11 @@
   - Office: 2434 (located at the east wing of E3-1)
   - Phone:042-350-3543
   - E-mail: moonzoo.kim @ gmail.com
-  - Office hour: Tues 5:30-6:30 PM (reservation e-mail is preferred)
+  - Office hour: Tues 3:00-4:00 PM (reservation e-mail is preferred)
 
 - Teaching assistants: TBD
 
-- Lecture hours: Tue/Thur 2:30 - 3:45 PM
+- Lecture hours: Tue/Thur 4:00 - 5:15 PM
 
 - Lecture room: E3 Rm#1101 (and through Zoom)
   - I plan to make a face-to-face lecture on Tues and an online lecture on Thurs (this plan may change later depending on the academic performance of the class participants).
@@ -48,43 +48,43 @@
 
 
 ## Syllabus
-This class covers automated SW testing/verification techniques to detect SW bugs effectively and efficiently. In particular, this class focuses to teach techniques that automatically generate test cases to achieve high code coverage and, thus, to detect many bugs.
+This class covers automated SW testing/verification techniques to detect SW bugs by analyzing **SW source code** and **its runtime behaviors**. In particular, this class focuses to teach techniques that automatically generate test cases to achieve high code coverage and, thus, to detect many bugs.
 
-The class aims to teach practical applications of advanced testing/verification techniques as well as their underlying algorithms.  This class guides students to use various open-source software testing/verification tools through HWs and learn the underlying mechanisms to maximize the performance of automated testing/verification.
+The class aims to teach **practical applications** of advanced testing/verification techniques as well as their underlying algorithms.  This class guides students to use various open-source software testing/verification tools through HWs and learn the underlying mechanisms to maximize the performance of automated testing/verification.
 
 ## Course Schedule
 
-### Part I: Overview of software complexity and testing
+### Part I: Overview of High SW Complexity and Testing
 
 “Software testers do not make software; they only make them better.” – Anonymous
 
-- Feb 28 : [Introduction](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pptx)
+- Feb 28 : [Introduction](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pptx) [[pdf]](1-overview/lec1-Intro-AutomatedSWAnalysis_v11.pdf)
 
 <!--  Feb 28 : <a href="part2-coverage/lec1-Intro-AutomatedSWAnalysis_v11.pptx" download> Introduction2 </a> -->
 
-- Mar 2 : [Necessity for systematic & automated testing techniques](1-overview/lec2-Intro-HighComplexitySW_v8.pptx)
+- Mar 2 : [Necessity for systematic & automated testing techniques](1-overview/lec2-Intro-HighComplexitySW_v8.pptx) [[pdf]](1-overview/lec2-Intro-HighComplexitySW_v8.pdf)
 
   - "Variability and Reproducibility in Software Engineering: A Study of Four Companies that Developed the Same System" by Anda et al.
 IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
-- Mar 7: [Overview of testing techniques (including the input partitioning technique)](1-overview/lec3-testing-overview-v3.pptx)
+- Mar 7: [Overview of testing techniques (including the input partitioning technique)](1-overview/lec3-testing-overview-v3.pptx) [[pdf]](1-overview/lec3-testing-overview-v3.pdf)
 
  
 
-### Part II: Source code coverage criteria for effective SW debugging
+### Part II: Source Code Coverage Criteria for Effective SW Debugging
 
 “It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free.”— Steve McConnell
 
-- Mar 9: [Graph coverage](2-coverage/lec4-graph_coverage-v4.pptx)
+- Mar 9: [Graph coverage](2-coverage/lec4-graph_coverage-v4.pptx) [[pdf]](2-coverage/lec4-graph_coverage-v4.pdf)
 
   - Intro to Software Testing web site
   - "An Experimental Comparison of Four Unit Test Criteria: Mutation, Edge-Pair, All-uses and Prime Path Coverage" by Nan Li et al. '09 Intl. Conf. on Software Testing, Verification, and Validation Workshops
 
-- Mar 14: [Graph coverage for source code](2-coverage/lec5-graph-coverage-code.pptx)
+- Mar 14: [Graph coverage for source code](2-coverage/lec5-graph-coverage-code.pptx) [[pdf]](2-coverage/lec5-graph-coverage-code.pdf)
   - Generating CFG using GCC and Graphviz [pdf] http://www.webgraphviz.com/
    - Cyclometic complexity (또다른 한글문서) https://www.guru99.com/cyclomatic-complexity.html
 
-- Mar 16: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx), [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx)
+- Mar 16: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx) [[pdf]](2-coverage/lec6-gcov-llvm-cov-v5.pdf) , [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx) [[pdf]](2-coverage/lec7-Clang-tutorial-v2.pdf)
    - gcov manual, clang for LLVM, Clang tutorial (code)
 - Mar 21: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx)
   - PrintFunction.zip
@@ -97,7 +97,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - Mar 30: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf),  Q&A session for coverage guided whitebox testing
   - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
 
-### Part III: Automated test generation (fuzzing and concolic testing (a.k.a., dynamic symbolic execution))
+### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
 - Apr 4: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
 
 - Apr 6: AFL (american fuzzy lop) fuzzer tutorial
@@ -121,7 +121,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - [Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing](3-fuzz-concolic/lec38-conbol.pptx) [[pdf]](3-fuzz-concolic/lec38-conbol.pdf)  [ASE'13 paper] [[Movie (40 min)]](https://drive.google.com/file/d/10DaVUtSZGJiHhHKe-abez7C3XuFQxoBx/view?usp=share_link)
   - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [[Movie (35min)]](https://drive.google.com/file/d/1G2j92qvfJBkPvIiBIklYE2EWjadEYIiW/view?usp=share_link)
 
-### Part IV: Model checking and test oracles
+### Part IV: Model Checking and Test Oracles
 
 - May 16, 18: [SAT-based bounded software model checking](4-model-checking/lec21-model_checking-v3.pptx) [[pdf]](4-model-checking/lec21-model_checking-v3.pdf)
   - The importance of unwinding loop bound: SAT-based Bounded Software Model Checking for Embedded Software: A Case Study, APSEC 2014 by Kim et al
@@ -136,7 +136,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - May 30: [Verification of the multi-sector read of flash memory storage](4-model-checking/lec27-SMC-examples2.pptx) [[pdf]](4-model-checking/lec27-SMC-examples2.pdf) 
  
-### Part V: Verification engine - SAT/SMT solver
+### Part V: Testing/Verification Engine - SAT/SMT Solver
 
 - June 1: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
   - SMTlib examples
@@ -145,7 +145,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - CS402 Intro to Logic (Predicate Calculus - Semantics)
   - SMT-competition 2022
 
-- June 8: [Using SAT solver for Sudoku](5-smt/lec44-sudoku-v2.pptx) [[pdf]](5-smt/lec44-sudoku-v2.ppdf), Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
+- June 8: [Using SAT solver for Sudoku](5-smt/lec44-sudoku-v2.pptx) [[pdf]](5-smt/lec44-sudoku-v2.pdf), Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
   - "Sudoku as a SAT problem" by I.Lynce and J.Ouaknine, Intl. Symp. on Artificial Intelligence and Mathematics 2006
   - The SuDoku Puzzle as a Satisfiability Problem
 
