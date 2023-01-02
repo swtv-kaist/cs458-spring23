@@ -6,11 +6,12 @@
 
 ## Administrative Information
 
-- Instructor: Prof. Moonzoo Kim
+- Instructor: [Prof. Moonzoo Kim](https://swtv.kaist.ac.kr/members/mzkim)
+
   - Office: 2434 (located at the east wing of E3-1)
   - Phone:042-350-3543
   - E-mail: moonzoo.kim @ gmail.com
-  - Office hour: Tues 4:00-5:00 PM (reservation e-mail is preferred)
+  - Office hour: Tues 5:30-6:30 PM (reservation e-mail is preferred)
 
 - Teaching assistants: TBD
 
@@ -83,77 +84,71 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - Generating CFG using GCC and Graphviz [pdf] http://www.webgraphviz.com/
    - Cyclometic complexity (또다른 한글문서) https://www.guru99.com/cyclomatic-complexity.html
 
-- Sep 20: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx), [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx)
+- Mar 16: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx), [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx)
    - gcov manual, clang for LLVM, Clang tutorial (code)
-- Sep 22: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx)
+- Mar 21: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx)
   - PrintFunction.zip
   - clang_example.c
 
-- : Logic coverage [pdf]
+- Mar 23: [Logic coverage](2-coverage/lec9-Logic-covearge-v3.pptx) [[pdf]](2-coverage/lec9-Logic-covearge-v3.pdf)
   - example [pdf]
-- :  Logic coverage from source code [pdf]
+- Mar 28:  [Logic coverage from source code](2-coverage/lec10-logic-covearge-code-v2.pptx) [[pdf]](2-coverage/lec10-logic-covearge-code-v2.pdf)
 
-- : No class (requested by KAIST)
-
--  : Mutation testing [pdf],  Q&A session for coverage guided whitebox testing
+- Mar 30: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf),  Q&A session for coverage guided whitebox testing
   - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
 
 ### Part III: Automated test generation (fuzzing and concolic testing (a.k.a., dynamic symbolic execution))
-- : Modern fuzzing overview  
+- Apr 4: Modern fuzzing overview  
 
-- : AFL tutorial
+- Apr 6: AFL tutorial
 
-- Nov 8 : Automated SW analysis for high reliability: a Concolic testing approach
+- Apr 11: Automated SW analysis for high reliability: a Concolic testing approach
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
-- Nov 10: no class
-
-- Nov 15: no class
-
-- Nov 17: CROWN tutorial
+- Apr 13, Apr 25: CROWN tutorial
   - triangle.c example
 
-- Nov 22, 24: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
+- Apr 20: Midterm exam
+
+- Apr 27, May 2: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
   - crown_examples.zip
   - cbmc-memory-model-example.zip
 
-- Nov 29: System-level concolic testing: Busybox application examples through CROWN
+- May 4: System-level concolic testing: Busybox application examples through CROWN
 
-- Dec 1 (Makeup class 1): Automated unit testing, Unit-level concolic testing: Busybox ls example
+- May 9: Automated unit testing, Unit-level concolic testing: Busybox ls example
 
-- Online makeup class 2 (pre-recorded movie clip):
+- May 11: Industrial case studies (pre-recorded movie clip)
   - Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing [ASE'13 paper] [Movie (40 min)]
   - Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry [ICSE'19 paper] [Movie (35min)]
 
 ### Part IV: Model checking and test oracles
 
-- Oct 11, 13: SAT-based bounded software model checking [pdf]
+- May 16, May 18: SAT-based bounded software model checking [pdf]
   - The importance of unwinding loop bound: SAT-based Bounded Software Model Checking for Embedded Software: A Case Study, APSEC 2014 by Kim et al
 
-- Oct 18, 20: No class due to midterm exam
-
-- Oct 25, 27: Software model checking examples [pdf]
+- May 23: Software model checking examples [pdf]
   - code examples for CBMC
 
-- Nov 1: Model Checking flash memory storage platform software - an industrial case study
+- May 25: Model Checking flash memory storage platform software - an industrial case study
   - "A Comparative Study of Software Model Checkers as Unit Testing Tools: An Industrial Case Study," IEEE Transactions on Software Engineering (TSE), vol 37, no 2, pages 146-160, March 2011
   - "Formal Verification of a Flash Memory Device Driver- an Experience Report" Spin 2008, by M.Kim, Y.Kim, Y.Choi, and H.Kim
 
-- Nov 3: Verification of the multi-sector read of flash memory storage
+- May 30: Verification of the multi-sector read of flash memory storage
  
 ### Part V: Verification engine - SAT/SMT solver
 
-- Dec 6: SMTlib tutorial, SMTlib web page, First order theories [pdf]
+- June 1: SMTlib tutorial, SMTlib web page, First order theories [pdf]
   - SMTlib examples
   - Examples of First Order Theories [pdf] (for concolic testing, UML OCL, JML, pre/post condition verification, etc)
   - Definition of "theory"
   - CS402 Intro to Logic (Predicate Calculus - Semantics)
   - SMT-competition 2022
 
-- Dec 8: Using SAT solver for Sudoku, Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
+- June 8: Using SAT solver for Sudoku, Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
   - "Sudoku as a SAT problem" by I.Lynce and J.Ouaknine, Intl. Symp. on Artificial Intelligence and Mathematics 2006
   - The SuDoku Puzzle as a Satisfiability Problem
   - SAT-competition 2022
 
-- Dec 15 (13:00~15:30): Final exam (closed book)
+- June 15:  Final exam (closed book)
 
