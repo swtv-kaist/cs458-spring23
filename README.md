@@ -48,9 +48,9 @@
 
 
 ## Syllabus
-This class covers automated SW testing/verification techniques to detect SW bugs by analyzing **SW source code** and **its runtime behaviors**. In particular, this class focuses to teach techniques that automatically generate test cases to achieve high code coverage and, thus, to detect many bugs.
+This class covers automated SW testing/verification techniques to detect SW bugs by analyzing **SW source code** and its **diverse runtime behaviors**. In particular, this class focuses to teach techniques that automatically generate test cases to achieve high code coverage and, thus, to detect many bugs. 
 
-The class aims to teach **practical applications** of advanced testing/verification techniques as well as their underlying algorithms.  This class guides students to use various open-source software testing/verification tools through HWs and learn the underlying mechanisms to maximize the performance of automated testing/verification.
+The class teaches **practical applications** of testing/verification techniques by applying open-source testing/verification tools to complete homework tasks. Also, it guides students to learn the underlying fundamental algorithms of such techniques/tools to maximize the performance of automated testing/verification.
 
 ## Course Schedule
 
