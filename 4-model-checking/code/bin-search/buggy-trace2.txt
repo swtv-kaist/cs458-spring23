@@ -1,0 +1,155 @@
+CBMC version 5.11 (cbmc-5.11) 64-bit x86_64 linux
+Parsing bin-search-buggy2.c
+Converting
+Type-checking bin-search-buggy2
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Generic Property Instrumentation
+Running with 8 object bits, 56 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop main.0 iteration 1 file bin-search-buggy2.c line 24 function main thread 0
+Unwinding loop main.0 iteration 2 file bin-search-buggy2.c line 24 function main thread 0
+Unwinding loop main.0 iteration 3 file bin-search-buggy2.c line 24 function main thread 0
+Unwinding loop bin_search.0 iteration 1 file bin-search-buggy2.c line 10 function bin_search thread 0
+Unwinding loop bin_search.0 iteration 2 file bin-search-buggy2.c line 10 function bin_search thread 0
+Unwinding loop bin_search.0 iteration 3 file bin-search-buggy2.c line 10 function bin_search thread 0
+Not unwinding loop bin_search.0 iteration 4 file bin-search-buggy2.c line 10 function bin_search thread 0
+Unwinding loop main.1 iteration 1 file bin-search-buggy2.c line 35 function main thread 0
+Unwinding loop main.1 iteration 2 file bin-search-buggy2.c line 35 function main thread 0
+Unwinding loop main.1 iteration 3 file bin-search-buggy2.c line 35 function main thread 0
+size of program expression: 228 steps
+simple slicing removed 9 assignments
+Generated 4 VCC(s), 4 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 with simplifier
+3552 variables, 11095 clauses
+SAT checker: instance is SATISFIABLE
+Solving with MiniSAT 2.2.1 with simplifier
+3552 variables, 3697 clauses
+SAT checker: instance is UNSATISFIABLE
+Runtime decision procedure: 0.0369582s
+
+** Results:
+bin-search-buggy2.c function main
+[main.assertion.1] line 33 assertion a[(signed long int)result] == key: SUCCESS
+[main.assertion.2] line 36 assertion a[(signed long int)i] != key: FAILURE
+
+Trace for main.assertion.2:
+
+State 17 file bin-search-buggy2.c function main line 23 thread 0
+----------------------------------------------------
+  a={ 0, 0, 0 } ({ 00000000, 00000000, 00000000 })
+
+State 18 file bin-search-buggy2.c function main line 23 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 19 file bin-search-buggy2.c function main line 23 thread 0
+----------------------------------------------------
+  key=0 (00000000)
+
+State 20 file bin-search-buggy2.c function main line 23 thread 0
+----------------------------------------------------
+  result=0 (00000000)
+
+State 21 file bin-search-buggy2.c function main line 24 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 28 file bin-search-buggy2.c function main line 25 thread 0
+----------------------------------------------------
+  a[0l]=31 (00011111)
+
+State 33 file bin-search-buggy2.c function main line 24 thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 41 file bin-search-buggy2.c function main line 25 thread 0
+----------------------------------------------------
+  a[1l]='>' (00111110)
+
+State 46 file bin-search-buggy2.c function main line 24 thread 0
+----------------------------------------------------
+  i=2 (00000010)
+
+State 54 file bin-search-buggy2.c function main line 25 thread 0
+----------------------------------------------------
+  a[2l]=126 (01111110)
+
+State 59 file bin-search-buggy2.c function main line 24 thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 67 file bin-search-buggy2.c function main line 29 thread 0
+----------------------------------------------------
+  key=126 (01111110)
+
+State 70 file bin-search-buggy2.c function main line 30 thread 0
+----------------------------------------------------
+  a=a!0@1 (00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 71 file bin-search-buggy2.c function main line 30 thread 0
+----------------------------------------------------
+  size=3 (00000011)
+
+State 72 file bin-search-buggy2.c function main line 30 thread 0
+----------------------------------------------------
+  x=126 (01111110)
+
+State 73 file bin-search-buggy2.c function bin_search line 5 thread 0
+----------------------------------------------------
+  low=0 (00000000)
+
+State 74 file bin-search-buggy2.c function bin_search line 5 thread 0
+----------------------------------------------------
+  low=0 (00000000)
+
+State 75 file bin-search-buggy2.c function bin_search line 6 thread 0
+----------------------------------------------------
+  high=0 (00000000)
+
+State 76 file bin-search-buggy2.c function bin_search line 6 thread 0
+----------------------------------------------------
+  high=2 (00000010)
+
+State 78 file bin-search-buggy2.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 79 file bin-search-buggy2.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=1 (00000001)
+
+State 82 file bin-search-buggy2.c function bin_search line 15 thread 0
+----------------------------------------------------
+  low=2 (00000010)
+
+State 88 file bin-search-buggy2.c function main line 30 thread 0
+----------------------------------------------------
+  result=-1 (11111111)
+
+State 90 file bin-search-buggy2.c function main line 35 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 93 file bin-search-buggy2.c function main line 35 thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 97 file bin-search-buggy2.c function main line 35 thread 0
+----------------------------------------------------
+  i=2 (00000010)
+
+Violated property:
+  file bin-search-buggy2.c function main line 36 thread 0
+  assertion a[(signed long int)i] != key
+  a[(signed long int)i] != key
+
+
+
+** 1 of 2 failed (2 iterations)
+VERIFICATION FAILED

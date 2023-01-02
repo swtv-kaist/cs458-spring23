@@ -1,0 +1,303 @@
+CBMC version 5.11 (cbmc-5.11) 64-bit x86_64 linux
+Parsing bin-search-buggy3.c
+Converting
+Type-checking bin-search-buggy3
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Generic Property Instrumentation
+Running with 8 object bits, 56 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop main.0 iteration 1 file bin-search-buggy3.c line 24 function main thread 0
+Unwinding loop main.0 iteration 2 file bin-search-buggy3.c line 24 function main thread 0
+Unwinding loop main.0 iteration 3 file bin-search-buggy3.c line 24 function main thread 0
+Unwinding loop bin_search.0 iteration 1 file bin-search-buggy3.c line 10 function bin_search thread 0
+Unwinding loop bin_search.0 iteration 2 file bin-search-buggy3.c line 10 function bin_search thread 0
+Unwinding loop bin_search.0 iteration 3 file bin-search-buggy3.c line 10 function bin_search thread 0
+Not unwinding loop bin_search.0 iteration 4 file bin-search-buggy3.c line 10 function bin_search thread 0
+Unwinding loop main.1 iteration 1 file bin-search-buggy3.c line 35 function main thread 0
+Unwinding loop main.1 iteration 2 file bin-search-buggy3.c line 35 function main thread 0
+Unwinding loop main.1 iteration 3 file bin-search-buggy3.c line 35 function main thread 0
+size of program expression: 230 steps
+simple slicing removed 9 assignments
+Generated 26 VCC(s), 6 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 with simplifier
+3723 variables, 12042 clauses
+SAT checker: instance is SATISFIABLE
+Solving with MiniSAT 2.2.1 with simplifier
+3723 variables, 4536 clauses
+SAT checker: instance is SATISFIABLE
+Solving with MiniSAT 2.2.1 with simplifier
+3723 variables, 4523 clauses
+SAT checker: instance is UNSATISFIABLE
+Runtime decision procedure: 0.0298582s
+
+** Results:
+bin-search-buggy3.c function main
+[main.array_bounds.1] line 25 array `a' lower bound in a[(signed long int)i]: SUCCESS
+[main.array_bounds.2] line 25 array `a' upper bound in a[(signed long int)i]: SUCCESS
+[main.array_bounds.3] line 26 array `a' lower bound in a[(signed long int)((signed int)i - 1)]: SUCCESS
+[main.array_bounds.4] line 26 array `a' upper bound in a[(signed long int)((signed int)i - 1)]: SUCCESS
+[main.array_bounds.5] line 26 array `a' lower bound in a[(signed long int)i]: SUCCESS
+[main.array_bounds.6] line 26 array `a' upper bound in a[(signed long int)i]: SUCCESS
+[main.array_bounds.7] line 33 array `a' lower bound in a[(signed long int)result]: SUCCESS
+[main.array_bounds.8] line 33 array `a' upper bound in a[(signed long int)result]: FAILURE
+[main.assertion.1] line 33 assertion a[(signed long int)result] == key: FAILURE
+[main.array_bounds.9] line 36 array `a' lower bound in a[(signed long int)i]: SUCCESS
+[main.array_bounds.10] line 36 array `a' upper bound in a[(signed long int)i]: SUCCESS
+[main.assertion.2] line 36 assertion a[(signed long int)i] != key: SUCCESS
+
+Trace for main.array_bounds.8:
+
+State 17 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  a={ 0, 0, 0 } ({ 00000000, 00000000, 00000000 })
+
+State 18 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 19 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  key=0 (00000000)
+
+State 20 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  result=0 (00000000)
+
+State 21 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 28 file bin-search-buggy3.c function main line 25 thread 0
+----------------------------------------------------
+  a[0l]=20 (00010100)
+
+State 33 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 41 file bin-search-buggy3.c function main line 25 thread 0
+----------------------------------------------------
+  a[1l]='(' (00101000)
+
+State 46 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=2 (00000010)
+
+State 54 file bin-search-buggy3.c function main line 25 thread 0
+----------------------------------------------------
+  a[2l]='1' (00110001)
+
+State 59 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 67 file bin-search-buggy3.c function main line 29 thread 0
+----------------------------------------------------
+  key='4' (00110100)
+
+State 70 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  a=a!0@1 (00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 71 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  size=3 (00000011)
+
+State 72 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  x='4' (00110100)
+
+State 73 file bin-search-buggy3.c function bin_search line 5 thread 0
+----------------------------------------------------
+  low=0 (00000000)
+
+State 74 file bin-search-buggy3.c function bin_search line 5 thread 0
+----------------------------------------------------
+  low=0 (00000000)
+
+State 75 file bin-search-buggy3.c function bin_search line 6 thread 0
+----------------------------------------------------
+  high=0 (00000000)
+
+State 76 file bin-search-buggy3.c function bin_search line 6 thread 0
+----------------------------------------------------
+  high=3 (00000011)
+
+State 78 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 79 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=1 (00000001)
+
+State 82 file bin-search-buggy3.c function bin_search line 15 thread 0
+----------------------------------------------------
+  low=2 (00000010)
+
+State 86 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 87 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=2 (00000010)
+
+State 90 file bin-search-buggy3.c function bin_search line 15 thread 0
+----------------------------------------------------
+  low=3 (00000011)
+
+State 94 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 95 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=3 (00000011)
+
+State 100 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  result=3 (00000011)
+
+Violated property:
+  file bin-search-buggy3.c function main line 33 thread 0
+  array `a' upper bound in a[(signed long int)result]
+  !((signed long int)result >= 3l)
+
+
+
+Trace for main.assertion.1:
+
+State 17 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  a={ 0, 0, 0 } ({ 00000000, 00000000, 00000000 })
+
+State 18 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 19 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  key=0 (00000000)
+
+State 20 file bin-search-buggy3.c function main line 23 thread 0
+----------------------------------------------------
+  result=0 (00000000)
+
+State 21 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 28 file bin-search-buggy3.c function main line 25 thread 0
+----------------------------------------------------
+  a[0l]=20 (00010100)
+
+State 33 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 41 file bin-search-buggy3.c function main line 25 thread 0
+----------------------------------------------------
+  a[1l]='(' (00101000)
+
+State 46 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=2 (00000010)
+
+State 54 file bin-search-buggy3.c function main line 25 thread 0
+----------------------------------------------------
+  a[2l]='1' (00110001)
+
+State 59 file bin-search-buggy3.c function main line 24 thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 67 file bin-search-buggy3.c function main line 29 thread 0
+----------------------------------------------------
+  key='4' (00110100)
+
+State 70 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  a=a!0@1 (00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 71 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  size=3 (00000011)
+
+State 72 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  x='4' (00110100)
+
+State 73 file bin-search-buggy3.c function bin_search line 5 thread 0
+----------------------------------------------------
+  low=0 (00000000)
+
+State 74 file bin-search-buggy3.c function bin_search line 5 thread 0
+----------------------------------------------------
+  low=0 (00000000)
+
+State 75 file bin-search-buggy3.c function bin_search line 6 thread 0
+----------------------------------------------------
+  high=0 (00000000)
+
+State 76 file bin-search-buggy3.c function bin_search line 6 thread 0
+----------------------------------------------------
+  high=3 (00000011)
+
+State 78 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 79 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=1 (00000001)
+
+State 82 file bin-search-buggy3.c function bin_search line 15 thread 0
+----------------------------------------------------
+  low=2 (00000010)
+
+State 86 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 87 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=2 (00000010)
+
+State 90 file bin-search-buggy3.c function bin_search line 15 thread 0
+----------------------------------------------------
+  low=3 (00000011)
+
+State 94 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=0 (00000000)
+
+State 95 file bin-search-buggy3.c function bin_search line 11 thread 0
+----------------------------------------------------
+  mid=3 (00000011)
+
+State 100 file bin-search-buggy3.c function main line 30 thread 0
+----------------------------------------------------
+  result=3 (00000011)
+
+Violated property:
+  file bin-search-buggy3.c function main line 33 thread 0
+  array `a' upper bound in a[(signed long int)result]
+  !((signed long int)result >= 3l)
+
+
+Violated property:
+  file bin-search-buggy3.c function main line 33 thread 0
+  assertion a[(signed long int)result] == key
+  a[(signed long int)result] == key
+
+
+
+** 2 of 12 failed (3 iterations)
+VERIFICATION FAILED
