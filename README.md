@@ -11,7 +11,7 @@
   - Office: 2434 (located at the east wing of E3-1)
   - Phone:042-350-3543
   - E-mail: moonzoo.kim @ gmail.com
-  - Office hour: Tues 4:00-5:00 PM (reservation e-mail is preferred)
+  - Office hour: Tues 5:30-6:30 PM (reservation e-mail is preferred)
 
 - Teaching assistants: TBD
 
@@ -90,11 +90,11 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - PrintFunction.zip
   - clang_example.c
 
-- Mar 23, 28: [Logic coverage](2-coverage/lec9-Logic-covearge-v3.pptx)[pdf](2-coverage/lec9-Logic-covearge-v3.pdf)
+- Mar 23, 28: [Logic coverage](2-coverage/lec9-Logic-covearge-v3.pptx) [[pdf]](2-coverage/lec9-Logic-covearge-v3.pdf)
   - example [pdf]
-- Mar 30:  [Logic coverage from source code](2-coverage/lec10-logic-covearge-code-v2.pptx) [pdf](2-coverage/lec10-logic-covearge-code-v2.pdf)
+- Mar 30:  [Logic coverage from source code](2-coverage/lec10-logic-covearge-code-v2.pptx) [[pdf]](2-coverage/lec10-logic-covearge-code-v2.pdf)
 
-- Apr 4: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx)[pdf](2-coverage/lec11-mutation-testing-v2.pdf),  Q&A session for coverage guided whitebox testing
+- Apr 4: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf),  Q&A session for coverage guided whitebox testing
   - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
 
 ### Part III: Automated test generation (fuzzing and concolic testing (a.k.a., dynamic symbolic execution))
@@ -102,55 +102,54 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - Apr 11 : AFL tutorial
 
-- Apr 13 : Q&A for midterm exam
+- Apr 13 :  
+: Automated SW analysis for high reliability: a Concolic testing approach
+  - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
 - Apr 20: Midterm exam
 
-- Apr 25: Automated SW analysis for high reliability: a Concolic testing approach
-  - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
-
-- Apr 27, May 2: CROWN tutorial
+- Apr 25, Apr 27: CROWN tutorial
   - triangle.c example
 
-- May 4, May 9: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
+- May 2, May 4: CROWN Examples, compared to CBMC Memory Model, application of concolic testing to the circular queue example
   - crown_examples.zip
   - cbmc-memory-model-example.zip
 
-- May 11: System-level concolic testing: Busybox application examples through CROWN
+- May 9: System-level concolic testing: Busybox application examples through CROWN
 
-- May 16: Automated unit testing, Unit-level concolic testing: Busybox ls example
+- May 11: Automated unit testing, Unit-level concolic testing: Busybox ls example
 
-- May 18: Industrial case studies (pre-recorded movie clip)
+- May 16: Industrial case studies (pre-recorded movie clip)
   - Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing [ASE'13 paper] [Movie (40 min)]
   - Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry [ICSE'19 paper] [Movie (35min)]
 
 ### Part IV: Model checking and test oracles
 
-- May 23, May 25: SAT-based bounded software model checking [pdf]
+- May 18, May 25: SAT-based bounded software model checking [pdf]
   - The importance of unwinding loop bound: SAT-based Bounded Software Model Checking for Embedded Software: A Case Study, APSEC 2014 by Kim et al
 
-- May 30, June 1: Software model checking examples [pdf]
+- May 26: Software model checking examples [pdf]
   - code examples for CBMC
 
-- June 8: Model Checking flash memory storage platform software - an industrial case study
+- May 30: Model Checking flash memory storage platform software - an industrial case study
   - "A Comparative Study of Software Model Checkers as Unit Testing Tools: An Industrial Case Study," IEEE Transactions on Software Engineering (TSE), vol 37, no 2, pages 146-160, March 2011
   - "Formal Verification of a Flash Memory Device Driver- an Experience Report" Spin 2008, by M.Kim, Y.Kim, Y.Choi, and H.Kim
 
-- Nov 3: Verification of the multi-sector read of flash memory storage
+- June 1: Verification of the multi-sector read of flash memory storage
  
 ### Part V: Verification engine - SAT/SMT solver
 
-- Dec 6: SMTlib tutorial, SMTlib web page, First order theories [pdf]
+- June 8: SMTlib tutorial, SMTlib web page, First order theories [pdf]
   - SMTlib examples
   - Examples of First Order Theories [pdf] (for concolic testing, UML OCL, JML, pre/post condition verification, etc)
   - Definition of "theory"
   - CS402 Intro to Logic (Predicate Calculus - Semantics)
   - SMT-competition 2022
 
-- Dec 8: Using SAT solver for Sudoku, Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
+- TBD: Using SAT solver for Sudoku, Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
   - "Sudoku as a SAT problem" by I.Lynce and J.Ouaknine, Intl. Symp. on Artificial Intelligence and Mathematics 2006
   - The SuDoku Puzzle as a Satisfiability Problem
   - SAT-competition 2022
 
-- Dec 15 (13:00~15:30): Final exam (closed book)
+- June 15:  Final exam (closed book)
 
