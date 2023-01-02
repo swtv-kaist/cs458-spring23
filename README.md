@@ -105,7 +105,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - Apr 11: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
-- Apr 13, Apr 25: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
+- Apr 13, 25: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
   - triangle.c example
 
 - **Apr 20: Midterm exam (closed book)**
@@ -123,13 +123,13 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 ### Part IV: Model checking and test oracles
 
-- May 16, May 18: SAT-based bounded software model checking [pdf]
+- May 16, 18: [SAT-based bounded software model checking](4-model-checking/lec21-model_checking-v3.pptx) [[pdf]](4-model-checking/lec21-model_checking-v3.pdf)
   - The importance of unwinding loop bound: SAT-based Bounded Software Model Checking for Embedded Software: A Case Study, APSEC 2014 by Kim et al
 
-- May 23: Software model checking examples [pdf]
+- May 23: [Software model checking examples](4-model-checking/lec22-SMC-examples-v4.pptx) [[pdf]](4-model-checking/lec22-SMC-examples-v4.pdf)
   - code examples for CBMC
 
-- May 25: CBMC memory model, Model Checking flash memory storage platform software - an industrial case study
+- May 25: [CBMC memory model](4-model-checking/, Model Checking flash memory storage platform software - an industrial case study
   - cbmc-memory-model-example.zip
   - "A Comparative Study of Software Model Checkers as Unit Testing Tools: An Industrial Case Study," IEEE Transactions on Software Engineering (TSE), vol 37, no 2, pages 146-160, March 2011
   - "Formal Verification of a Flash Memory Device Driver- an Experience Report" Spin 2008, by M.Kim, Y.Kim, Y.Choi, and H.Kim
