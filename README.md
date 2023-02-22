@@ -13,7 +13,7 @@
   - E-mail: moonzoo.kim @ gmail.com
   - Office hour: Tues 3:00-4:00 PM (reservation e-mail is preferred)
 
-- Teaching assistants: TBD
+- Teaching assistants: Youngseok Choi (youngseok.choi@kaist.ac.kr) and Mehdi Aghakishiyev (agakisiyev@kaist.ac.kr)
 
 - Lecture hours: Tue/Thur 4:00 - 5:15 PM
 
@@ -99,7 +99,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 ### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
 - Apr 4: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
 
-- Apr 6: AFL (american fuzzy lop) fuzzer tutorial
+- Apr 6: AFL++ (american fuzzy lop) fuzzer tutorial
 
 - Apr 11: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
