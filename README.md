@@ -9,7 +9,7 @@
 - Instructor: [Prof. Moonzoo Kim](https://swtv.kaist.ac.kr/members/mzkim)
 
   - Office: 2434 (located at the east wing of E3-1)
-  - Phone:042-350-3543
+  - Phone: 042-350-3543
   - E-mail: moonzoo.kim @ gmail.com
   - Office hour: Tues 3:00-4:00 PM (reservation e-mail is preferred)
 
