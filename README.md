@@ -83,9 +83,13 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   [Generating CFG using GCC and Graphviz](2-coverage/lec5.5-cfg-generation-v2.pptx) [[pdf]](2-coverage/lec5.5-cfg-generation-v2.pdf) 
    - http://www.webgraphviz.com/
    - Cyclometic complexity (또다른 한글문서) https://www.guru99.com/cyclomatic-complexity.html
+   - Useful commercial tools to manually analyze SW:
+     - Understand C++ (https://scitools.com)  (free academic version available)
+     - Source Insight (https://www.sourceinsight.com/)
 
 - Mar 16: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx) [[pdf]](2-coverage/lec6-gcov-llvm-cov-v5.pdf) , [CLang tutorial 1/2: Clang AST](2-coverage/lec7-Clang-tutorial-v2.pptx) [[pdf]](2-coverage/lec7-Clang-tutorial-v2.pdf)
-   - gcov manual, clang for LLVM, Clang tutorial (code)
+   - [gcc manual](https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html), [gcov manual](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)
+   - Clang for LLVM, Clang tutorial (code)
 - Mar 21: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx) [[pdf]](2-coverage/lec8-building-Clang-analyzer-v3.pdf)
   - PrintFunction.zip
   - clang_example.c
