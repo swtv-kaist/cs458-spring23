@@ -1,40 +1,54 @@
 # CS458-clang-api-documentation
-### ```printPretty()```
-_________
-For printing the statement\expression as it is. Usage:
-```C++
-bool VisitStmt(Stmt *stmt) {
-        std::string str1;
-        llvm::raw_string_ostream os(str1);
-        stmt->printPretty(os, NULL, LangOpts);
-        llvm::outs() << os.str();
-        return true;
-}
-```
-If we execute the above example in the code below, when ```*stmt``` points to the if statement:
-```c
-int main() {
-  int a = 5;
-  int b = 4;
+
+- This documentation is built to give help on finding useful clang APIs.
+- For more general info, check https://clang.llvm.org/doxygen.
+
+## Clang APIs List
+
+<details>
+  <summary> <code>void Stmt.printPretty(...)</code> - Print the statement/expression as it is.</summary>
+  <p>
+
+  ```C++
+  bool VisitStmt(Stmt *stmt) {
+          std::string str1;
+          llvm::raw_string_ostream os(str1);
+          stmt->printPretty(os, NULL, LangOpts);
+          llvm::outs() << os.str();
+          return true;
+  }
+  ```
+  If we execute the above example in the code below, when ```*stmt``` points to the if statement:
+  ```c
+  int main() {
+    int a = 5;
+    int b = 4;
+    if (a > b) {
+      a += 1;
+    }
+    else {
+      a -= 1;
+    }
+    return 0;
+  }
+  ```
+  Output will be:`
+  ```
   if (a > b) {
-    a += 1;
+      a += 1;
+  } else {
+      a -= 1;
   }
-  else {
-    a -= 1;
-  }
-  return 0;
-}
-```
-Output will be:`
-```
-if (a > b) {
-    a += 1;
-} else {
-    a -= 1;
-}
-```
+  ```
+
+  </p>
+</details>
+
+TODO
+
+
 _________
-### ```string getStmtClassName()```
+### ```string Stmt.getStmtClassName()```
 _________
 For obtaining the statment class, examples include ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```. Usage:
 ```C++
