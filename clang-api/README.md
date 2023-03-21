@@ -5,50 +5,45 @@
 
 ## Clang APIs List
 
-<details>
-  <summary> <code>void Stmt.printPretty(...)</code> - Print the statement/expression as it is.</summary>
-  <p>
+- [`void Stmt.printPretty(...)`](#api1)
+- [`string Stmt.getStmtClassName()`](#api2)
 
-  ```C++
-  bool VisitStmt(Stmt *stmt) {
-          std::string str1;
-          llvm::raw_string_ostream os(str1);
-          stmt->printPretty(os, NULL, LangOpts);
-          llvm::outs() << os.str();
-          return true;
-  }
-  ```
-  If we execute the above example in the code below, when ```*stmt``` points to the if statement:
-  ```c
-  int main() {
-    int a = 5;
-    int b = 4;
-    if (a > b) {
-      a += 1;
-    }
-    else {
-      a -= 1;
-    }
-    return 0;
-  }
-  ```
-  Output will be:`
-  ```
+### `void Stmt.printPretty(...)` <a name="api1"></a>
+
+Print the statement/expression as it is.
+```C++
+bool VisitStmt(Stmt *stmt) {
+        std::string str1;
+        llvm::raw_string_ostream os(str1);
+        stmt->printPretty(os, NULL, LangOpts);
+        llvm::outs() << os.str();
+        return true;
+}
+```
+If we execute the above example in the code below, when ```*stmt``` points to the if statement:
+```c
+int main() {
+  int a = 5;
+  int b = 4;
   if (a > b) {
-      a += 1;
-  } else {
-      a -= 1;
+    a += 1;
   }
-  ```
-
-  </p>
-</details>
-
-TODO
-
-
+  else {
+    a -= 1;
+  }
+  return 0;
+}
+```
+Output will be:`
+```
+if (a > b) {
+    a += 1;
+} else {
+    a -= 1;
+}
+```
 _________
-### ```string Stmt.getStmtClassName()```
+### ```string Stmt.getStmtClassName()``` <a name="api2"></a>
 _________
 For obtaining the statment class, examples include ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```. Usage:
 ```C++
