@@ -7,6 +7,26 @@
 
 - [`void Stmt.printPretty(...)`](#api1)
 - [`string Stmt.getStmtClassName()`](#api2)
+- [`SourceLocation Stmt.getBeginLoc(), SourceLocation Stmt.getEndLoc()`](#api3)
+- [`bool isa<StmtType>(statement), bool isa<ExprType>(statement)`](#api4)
+- [`ExprType* dyn_cast<ExprType>(statement)`](#api5)
+- [`QualType Expr.getType()`](#api6)
+- [`Expr* getBase()`](#api7)
+- [`SourceLocation getLParenLoc(), SourceLocation getRParenLoc()`](#api8)
+- [`Expr* getCond()`](#api9)
+- [`Stmt* getThen(), Stmt* getElse()`](#api10)
+- [`Expr* getSubExpr()`](#api11)
+- [`Stmt* getSubStmt()`](#api12)
+- [`SwitchCase* SwitchStmt.getSwitchCaseList(), SwitchCase* SwitchCase.getNextSwitchCase()`](#api13)
+- [`DeclarationNameInfo* MemberExpr.getMemberNameInfo()`](#api14)
+- [`bool MemberExpr.isArrow()`](#api15)
+- [`Stmt* getBody()`](#api16)
+- [`bool SourceLocation.isValid()`](#api17)
+- [`Stmt* FunctionDecl.getBody(), bool FunctionDecl.hasBody(), string FunctionDecl.getName()`](#api18)
+- [`bool FunctionDecl.isMain()`](#api19)
+- [`SourceLocation findLocationAfterToken(SourceLocation, tok::TokenKind, const SourceManager &, const LangOptions &, bool )`](#api20)
+- [`bool Rewriter.InsertTextBefore(SourceLocation, string), bool Rewriter.InsertTextAfter(SourceLocation, string)`](#api21)
+
 
 ### `void Stmt.printPretty(...)` <a name="api1"></a>
 
@@ -82,7 +102,7 @@ IntegerLiteral
 ```
 _________
 
-### ```SourceLocation getBeginLoc(), SourceLocation getEndLoc()```
+### ```SourceLocation Stmt.getBeginLoc(), SourceLocation Stmt.getEndLoc()``` <a name="api3"></a>
 _________
 Using this functions, you can get SourceLocation object that points to the beginning and the end of given statement. To get the line and column information, use the following functions:
 #### ```getExpansionLineNumber(), getExpansionColumnNumber()```
@@ -120,7 +140,7 @@ The output will be:
 ```
 _________
 
-### ```bool isa<StmtType>(statement), bool isa<ExprType>(statement)```
+### ```bool isa<StmtType>(statement), bool isa<ExprType>(statement)``` <a name="api4"></a>
 _________
 For obtaining the information about the type of the statement or expression, such as IfStmt, WhileStmt. Usage:
 ```C++
@@ -165,7 +185,7 @@ You have reached array subscript expression
 ```
 _________
 
-### ```ExprType* dyn_cast<ExprType>(statement)```
+### ```ExprType* dyn_cast<ExprType>(statement)``` <a name="api5"></a>
 _________
 For obtaining the underlying statement, such as ```Stmt*``` -> ```IfStmt*```. Can also be applied to cast Stmt to underlying expression such as, ```Stmt*``` -> ```MemberExpr*```. Usage:
 ```C++
@@ -175,7 +195,7 @@ bool VisitStmt(Stmt *stmt) {
 }
 ```
 _________
-### ```QualType getType()```
+### ```QualType Expr.getType()``` <a name="api6"></a>
 _________
 For obtaining type of the given object. Use ```getAsString()``` function to obtain type in string form. Not applicable to ```Stmt``` objects Usage:
 ```C++
@@ -205,7 +225,7 @@ int
 int *
 ```
 _________
-### ```Expr * getBase()```
+### ```Expr* getBase()``` <a name="api7"></a>
 _________
 For obtaining base expression if the target expression is MemberExpr, ArraySubscriptExpr. Usage:
 ```C++
@@ -239,7 +259,7 @@ int
 struct a *
 ```
 _________
-### ```SourceLocation getLParenLoc(), SourceLocation getRParenLoc()```
+### ```SourceLocation getLParenLoc(), SourceLocation getRParenLoc()``` <a name="api8"></a>
 _________
 These functions will return the location of the left and right paranthese if the statement has those. Not applicable to all statement, can be used with IfStmt, ForStmt and etc. Usage:
 ```C++
@@ -276,7 +296,7 @@ The output will be:
 6, 3
 ```
 _________
-### ```Expr * getCond()```
+### ```Expr* getCond()``` <a name="api9"></a>
 _________
 This function can be used to obtain the conditional expression in statements such as If, For and etc. Usage:
 ```C++
@@ -289,7 +309,7 @@ bool VisitStmt(Stmt *stmt) {
 }
 ```
 _________
-### ```Stmt * getThen(), Stmt * getElse()```
+### ```Stmt* getThen(), Stmt* getElse()``` <a name="api10"></a>
 _________
 This function can be used to obtain then and else part of the if condition. Usage:
 ```C++
@@ -349,7 +369,7 @@ a > 4
 }
 ```
 _________
-### ```Expr * getSubExpr()```
+### ```Expr* getSubExpr()``` <a name="api11"></a>
 _________
 This base expression used in the dereferencing expression, such as ```*pointer``` -> ```getSubExpr``` will give you ```pointer```. Usage:
 ```C++
@@ -392,7 +412,7 @@ pointer
 ```
 _________
 
-### ```Stmt * getSubStmt()```
+### ```Stmt* getSubStmt()``` <a name="api12"></a>
 _________
 Use this function to get the statement block that corresponds to the switch case. Usage:
 ```C++
@@ -436,7 +456,7 @@ a = 0
 ```
 _________
 
-### ```SwitchCase * getSwitchCaseList(), SwitchCase * getNextSwitchCase()```
+### ```SwitchCase* SwitchStmt.getSwitchCaseList(), SwitchCase* SwitchCase.getNextSwitchCase()``` <a name="api13"></a>
 _________
 Use these functions to iterate through the cases of the switch statement. Usage:
 ```C++
@@ -491,7 +511,7 @@ a += 1;
 ```
 _________
 
-### ```DeclarationNameInfo * getMemberNameInfo()```
+### ```DeclarationNameInfo* MemberExpr.getMemberNameInfo()``` <a name="api14"></a>
 _________
 To obtain information about the member variable. Usage:
 ```C++
@@ -522,7 +542,7 @@ myCustomVariable
 ```
 _________
 
-### ```bool isArrow()```
+### ```bool MemberExpr.isArrow()``` <a name="api15"></a>
 _________
 To learn whether the member access is arrow or dot access. Usage:
 ```C++
@@ -562,7 +582,7 @@ We got the memeber access with arrow
 ```
 _________
 
-### ```Stmt* getBody()```
+### ```Stmt* getBody()``` <a name="api16"></a>
 _________
 To obtain the body of a given statement. Can be applied to loops, functions. Usage:
 ```C++
@@ -601,7 +621,7 @@ The output will be:
 }
 ```
 _________
-### ```bool isValid()```
+### ```bool SourceLocation.isValid()``` <a name="api17"></a>
 _________
 Return true if the given ```SourceLocation``` object is valid . Usage:
 ```C++
@@ -635,7 +655,7 @@ Got valid SourceLocation object
 Got valid SourceLocation object
 ```
 _________
-### ```Stmt* getBody(), bool hasBody(), string getName()```
+### ```Stmt* FunctionDecl.getBody(), bool FunctionDecl.hasBody(), string FunctionDecl.getName()``` <a name="api18"></a>
 _________
 These functions can be used to obtain information about the given function. Usage:
 ```C++
@@ -685,7 +705,7 @@ main
 }
 ```
 _________
-### ```bool isMain()```
+### ```bool FunctionDecl.isMain()``` <a name="api19"></a>
 _________
 To check whether the current function is main. Usage:
 ```C++
@@ -721,7 +741,7 @@ Not the main function
 Got the main function
 ```
 _________
-### ```SourceLocation findLocationAfterToken(SourceLocation, 	tok::TokenKind, const SourceManager &, const LangOptions &, bool )```
+### ```SourceLocation findLocationAfterToken(SourceLocation, tok::TokenKind, const SourceManager &, const LangOptions &, bool )``` <a name="api20"></a>
 _________
 Returns the location immediately after the specified token, if the token is right after the given location. Usage:
 ```C++
@@ -772,7 +792,7 @@ Invalid SourceLocation
 ```
 _________
 
-### ```bool TheRewriter.InsertTextBefore(SourceLocation, string), bool heRewriter.InsertTextAfter(SourceLocation, string)```
+### ```bool Rewriter.InsertTextBefore(SourceLocation, string), bool Rewriter.InsertTextAfter(SourceLocation, string)``` <a name="api21"></a>
 _________
 You can utilize these functions to modify the target source file. Usage:
 ```C++
