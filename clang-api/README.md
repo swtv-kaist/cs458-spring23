@@ -1,69 +1,43 @@
-# CS458-clang-api-documentation
+# CS458 Clang API Documentation
 
-- This documentation is built to give help on finding useful clang APIs.
-- For more general info, check https://clang.llvm.org/doxygen.
-
-## Clang APIs List
-
-- [`void Stmt.printPretty(...)`](#api1)
-- [`string Stmt.getStmtClassName()`](#api2)
-- [`SourceLocation Stmt.getBeginLoc(), SourceLocation Stmt.getEndLoc()`](#api3)
-- [`bool isa<StmtType>(statement), bool isa<ExprType>(statement)`](#api4)
-- [`ExprType* dyn_cast<ExprType>(statement)`](#api5)
-- [`QualType Expr.getType()`](#api6)
-- [`Expr* getBase()`](#api7)
-- [`SourceLocation getLParenLoc(), SourceLocation getRParenLoc()`](#api8)
-- [`Expr* getCond()`](#api9)
-- [`Stmt* getThen(), Stmt* getElse()`](#api10)
-- [`Expr* getSubExpr()`](#api11)
-- [`Stmt* getSubStmt()`](#api12)
-- [`SwitchCase* SwitchStmt.getSwitchCaseList(), SwitchCase* SwitchCase.getNextSwitchCase()`](#api13)
-- [`DeclarationNameInfo* MemberExpr.getMemberNameInfo()`](#api14)
-- [`bool MemberExpr.isArrow()`](#api15)
-- [`Stmt* getBody()`](#api16)
-- [`bool SourceLocation.isValid()`](#api17)
-- [`Stmt* FunctionDecl.getBody(), bool FunctionDecl.hasBody(), string FunctionDecl.getName()`](#api18)
-- [`bool FunctionDecl.isMain()`](#api19)
-- [`SourceLocation findLocationAfterToken(SourceLocation, tok::TokenKind, const SourceManager &, const LangOptions &, bool )`](#api20)
-- [`bool Rewriter.InsertTextBefore(SourceLocation, string), bool Rewriter.InsertTextAfter(SourceLocation, string)`](#api21)
+This is a list of useful clang APIs for clang instrumentation homework. For more general info, check https://clang.llvm.org/doxygen.
 
 
-### `void Stmt.printPretty(...)` <a name="api1"></a>
+- [Source Code Printing and Instrumentation](#source-code-printing-and-instrumentation)
+  - [```string Stmt::getStmtClassName()```](#string-stmtgetstmtclassname)
+  - [`void Stmt::printPretty(raw_ostream &OS, PrinterHelper *Helper, const PrintingPolicy &Policy)`](#void-stmtprintprettyraw_ostream-os-printerhelper-helper-const-printingpolicy-policy)
+  - [```SourceLocation Stmt::getBeginLoc(), SourceLocation Stmt::getEndLoc()``` ](#sourcelocation-stmtgetbeginloc-sourcelocation-stmtgetendloc-)
+  - [```SourceLocation getLParenLoc(), SourceLocation getRParenLoc()``` ](#sourcelocation-getlparenloc-sourcelocation-getrparenloc-)
+  - [```bool SourceLocation::isValid()``` ](#bool-sourcelocationisvalid-)
+  - [`SourceLocation Lexer::findLocationAfterToken(SourceLocation Loc, tok::TokenKind TKind, const SourceManager &SM, const LangOptions &LangOpts, bool SkipTrailingWhitespaceAndNewLine)`](#sourcelocation-lexerfindlocationaftertokensourcelocation-loc-toktokenkind-tkind-const-sourcemanager-sm-const-langoptions-langopts-bool-skiptrailingwhitespaceandnewline)
+  - [```bool Rewriter::InsertTextBefore(SourceLocation Loc, string text)```](#bool-rewriterinserttextbeforesourcelocation-loc-string-text)
+  - [```bool Rewriter::InsertTextAfter(SourceLocation Loc, string text)```](#bool-rewriterinserttextaftersourcelocation-loc-string-text)
+- [Getting Information of Statements and Expressions](#getting-information-of-statements-and-expressions)
+  - Loop and Conditional Statements
+    - [```Expr* IfStmt::getCond()```](#expr-ifstmtgetcond)
+    - [```Expr* ForStmt::getCond()```](#expr-forstmtgetcond)
+    - [```Stmt* IfStmt::getThen()```](#stmt-ifstmtgetthen)
+    - [```Stmt* IfStmt::getElse()```](#stmt-ifstmtgetelse)
+    - [```Stmt* getBody()```](#stmt-getbody)
+    - [```Stmt* SwitchCase::getSubStmt()```](#stmt-switchcasegetsubstmt)
+    - [```SwitchCase* SwitchStmt::getSwitchCaseList(), SwitchCase* SwitchCase::getNextSwitchCase()```](#switchcase-switchstmtgetswitchcaselist-switchcase-switchcasegetnextswitchcase)
+  - Class, Array and Pointer
+    - [```Expr* MemberExpr::getBase()```](#expr-memberexprgetbase)
+    - [```Expr* ArraySubscriptExpr::getBase()```](#expr-arraysubscriptexprgetbase)
+    - [```DeclarationNameInfo* MemberExpr::getMemberNameInfo()```](#declarationnameinfo-memberexprgetmembernameinfo)
+    - [```bool MemberExpr::isArrow()```](#bool-memberexprisarrow)
+    - [```Expr* getSubExpr()```](#expr-getsubexpr)
+  - Function
+    - [```Stmt* FunctionDecl::getBody(), bool FunctionDecl::hasBody(), string FunctionDecl::getName()```](#stmt-functiondeclgetbody-bool-functiondeclhasbody-string-functiondeclgetname)
+    - [```bool FunctionDecl::isMain()```](#bool-functiondeclismain)
+- [Type Checking and Casting](#type-checking-and-casting)
+  - [```bool isa<StmtType>(Stmt *stmt), bool isa<ExprType>(Stmt *stmt)```](#bool-isastmttypestmt-stmt-bool-isaexprtypestmt-stmt)
+  - [```ExprType* dyn_cast<ExprType>(Stmt *stmt)```](#exprtype-dyn_castexprtypestmt-stmt)
+  - [```QualType Expr::getType()```](#qualtype-exprgettype)
 
-Print the statement/expression as it is.
-```C++
-bool VisitStmt(Stmt *stmt) {
-        std::string str1;
-        llvm::raw_string_ostream os(str1);
-        stmt->printPretty(os, NULL, LangOpts);
-        llvm::outs() << os.str();
-        return true;
-}
-```
-If we execute the above example in the code below, when ```*stmt``` points to the if statement:
-```c
-int main() {
-  int a = 5;
-  int b = 4;
-  if (a > b) {
-    a += 1;
-  }
-  else {
-    a -= 1;
-  }
-  return 0;
-}
-```
-Output will be:`
-```
-if (a > b) {
-    a += 1;
-} else {
-    a -= 1;
-}
-```
+## Source Code Printing and Instrumentation
 _________
-### ```string Stmt.getStmtClassName()``` <a name="api2"></a>
+### ```string Stmt::getStmtClassName()```
 _________
 For obtaining the statment class, examples include ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```. Usage:
 ```C++
@@ -100,12 +74,51 @@ IntegerLiteral
 ReturnStmt
 IntegerLiteral
 ```
+
+________
+### `void Stmt::printPretty(raw_ostream &OS, PrinterHelper *Helper, const PrintingPolicy &Policy)`
+________
+
+Prints the statement/expression as it is.
+```C++
+bool VisitStmt(Stmt *stmt) {
+        std::string str1;
+        llvm::raw_string_ostream os(str1);
+        stmt->printPretty(os, NULL, LangOpts);
+        llvm::outs() << os.str();
+        return true;
+}
+```
+If we execute the above example in the code below, when ```*stmt``` points to the if statement:
+```c
+int main() {
+  int a = 5;
+  int b = 4;
+  if (a > b) {
+    a += 1;
+  }
+  else {
+    a -= 1;
+  }
+  return 0;
+}
+```
+Output will be:
+```
+if (a > b) {
+    a += 1;
+} else {
+    a -= 1;
+}
+```
 _________
 
-### ```SourceLocation Stmt.getBeginLoc(), SourceLocation Stmt.getEndLoc()``` <a name="api3"></a>
+### ```SourceLocation Stmt::getBeginLoc(), SourceLocation Stmt::getEndLoc()``` <a name="api3"></a>
 _________
 Using this functions, you can get SourceLocation object that points to the beginning and the end of given statement. To get the line and column information, use the following functions:
-#### ```getExpansionLineNumber(), getExpansionColumnNumber()```
+- `SourceManager::getExpansionLineNumber(SourceLocation loc)`
+- `SourceManager::getExpansionColumnNumber(SourceLocation loc)`
+
 Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
@@ -137,126 +150,6 @@ The output will be:
 ```
 3, 3
 6, 3
-```
-_________
-
-### ```bool isa<StmtType>(statement), bool isa<ExprType>(statement)``` <a name="api4"></a>
-_________
-For obtaining the information about the type of the statement or expression, such as IfStmt, WhileStmt. Usage:
-```C++
-bool VisitStmt(Stmt *stmt) {
-        if (isa<IfStmt>(stmt)){
-            llvm::outs() << "You have reached if statement\n";
-        }
-
-        if (isa<ArraySubscriptExpr>(stmt)){
-            llvm::outs() << "You have reached array subscript expression\n";
-        }
-        return true;
-}
-```
-If we execute the above example on the code below:
-```c
-int main() {
-
-  int a = 5;
-  if (a > 3) {
-    a += 1;
-  }
-
-  if (a < 6){
-    a -= 1;
-  }
-  else{
-    a += 1;
-  }
-
-  int intarr[10][10];
-
-  *intarr[1] = 42;
-  return 0;
-}
-```
-The output will be:
-```
-You have reached if statement
-You have reached if statement
-You have reached array subscript expression
-```
-_________
-
-### ```ExprType* dyn_cast<ExprType>(statement)``` <a name="api5"></a>
-_________
-For obtaining the underlying statement, such as ```Stmt*``` -> ```IfStmt*```. Can also be applied to cast Stmt to underlying expression such as, ```Stmt*``` -> ```MemberExpr*```. Usage:
-```C++
-bool VisitStmt(Stmt *stmt) {
-        IfStmt* ifStmt = dyn_cast<IfStmt>(statement);
-        return true;
-}
-```
-_________
-### ```QualType Expr.getType()``` <a name="api6"></a>
-_________
-For obtaining type of the given object. Use ```getAsString()``` function to obtain type in string form. Not applicable to ```Stmt``` objects Usage:
-```C++
-bool VisitStmt(Stmt *stmt) {
-        if (isa<ArraySubscriptExpr>(stmt)){
-            ArraySubscriptExpr* expr = dyn_cast<ArraySubscriptExpr>(stmt);
-            auto t = expr->getType().getAsString();
-            auto t_base = expr->getBase()->getType().getAsString();
-
-            llvm::outs() << t << "\n";
-            llvm::outs() << t_base << "\n";
-        }
-        return true;
-}
-```
-If we execute the above example on the code below:
-```c
-int main() {
-  int intarr[10];
-  intarr[1] = 42;
-  return 0;
-}
-```
-The output will be (```expr``` variable points to the whole expression ```intarr[1]``` which is integer, whereas ```expr->getBase()``` points to ```intarr```):
-```
-int
-int *
-```
-_________
-### ```Expr* getBase()``` <a name="api7"></a>
-_________
-For obtaining base expression if the target expression is MemberExpr, ArraySubscriptExpr. Usage:
-```C++
-bool VisitStmt(Stmt *stmt) {
-        if (isa<MemberExpr>(stmt)){
-            MemberExpr* expr = dyn_cast<MemberExpr>(stmt);
-            auto t = expr->getType().getAsString();
-            auto t_base = expr->getBase()->getType().getAsString();
-
-            llvm::outs() << t << "\n";
-            llvm::outs() << t_base << "\n";
-        }
-        return true;
-}
-```
-If we execute the above example on the code below:
-```c
-struct a {
-  int b;
-};
-
-int main() {
-  struct a * aptr;
-  aptr->b = 5;
-  return 0;
-}
-```
-The output will be (```expr->getBase()``` points to ```aptr```):
-```
-int
-struct a *
 ```
 _________
 ### ```SourceLocation getLParenLoc(), SourceLocation getRParenLoc()``` <a name="api8"></a>
@@ -296,22 +189,159 @@ The output will be:
 6, 3
 ```
 _________
-### ```Expr* getCond()``` <a name="api9"></a>
+### ```bool SourceLocation::isValid()``` <a name="api17"></a>
 _________
-This function can be used to obtain the conditional expression in statements such as If, For and etc. Usage:
+Returns true if the given ```SourceLocation``` object is valid . Usage:
+```C++
+bool VisitStmt(Stmt *stmt) {
+        SourceLocation loc = stmt->getBeginLoc();
+        if (loc.isValid()){
+          llvm::outs() << "Got valid SourceLocation object\n";
+        }
+        else{
+          llvm::outs() << "Invalid SourceLocation\n";
+        }
+        return true;
+}
+```
+If we execute the above example on the code below:
+```c
+int main() {
+  int a = 5;
+  int b = 10;
+  return 0;
+}
+```
+The output will be:
+```
+Got valid SourceLocation object
+Got valid SourceLocation object
+Got valid SourceLocation object
+Got valid SourceLocation object
+Got valid SourceLocation object
+Got valid SourceLocation object
+Got valid SourceLocation object
+```
+
+_________
+### `SourceLocation Lexer::findLocationAfterToken(SourceLocation Loc, tok::TokenKind TKind, const SourceManager &SM, const LangOptions &LangOpts, bool SkipTrailingWhitespaceAndNewLine)`
+________
+
+Returns the location immediately after the specified token, if the token is right after the given location. Usage:
+```C++
+bool VisitStmt(Stmt *stmt) {
+        tok::TokenKind tokenKind = clang::tok::semi;
+        unsigned int lineNum = m_sourceManager.getExpansionLineNumber(stmt->getBeginLoc());
+        unsigned int columnNum = m_sourceManager.getExpansionColumnNumber(stmt->getBeginLoc());
+        llvm::outs() << lineNum << ", " << columnNum << "\n";
+        SourceLocation next_after_loc = clang::Lexer::findLocationAfterToken(stmt->getBeginLoc(), tokenKind, m_sourceManager, LangOpts, false);
+        if (next_after_loc.isInvalid()){
+          llvm::outs() << "Invalid SourceLocation\n";
+        }
+        else{
+          lineNum = m_sourceManager.getExpansionLineNumber(next_after_loc);
+          columnNum = m_sourceManager.getExpansionColumnNumber(next_after_loc);
+          llvm::outs() << lineNum << ", " << columnNum << "\n\n\n";
+        }
+        return true;
+}
+```
+If we execute the above example on the code below:
+```c
+int main() {
+  int a = 5;
+  return 0;
+}
+```
+The output will be:
+```
+1, 12 -> Beginning of the main function, the opening bracket of the function, next token is not semicolon, return Invalid SourceLocation
+Invalid SourceLocation
+
+
+2, 3 -> Beginning of the variable declaration, next token is not semicolon, return Invalid SourceLocation
+Invalid SourceLocation
+
+
+2, 11 -> The integer literal at line 2, column 11 (5), next token is semicolon, return the SourceLocation right after semicolon
+2, 13
+
+
+3, 3 -> Beginning of the return statement, next token is not semicolon, return Invalid SourceLocation
+Invalid SourceLocation
+
+
+3, 10 -> The integer literal at line 3, column 10 (0) next token is semicolon, return the SourceLocation right after semicolon
+3, 12
+```
+_________
+
+### ```bool Rewriter::InsertTextBefore(SourceLocation Loc, string text)```
+### ```bool Rewriter::InsertTextAfter(SourceLocation Loc, string text)```
+_________
+You can utilize these functions to modify the target source file. Usage:
+```C++
+bool VisitStmt(Stmt *stmt) {
+        if (isa<IfStmt>(stmt)){
+            IfStmt * ifStmt = dyn_cast<IfStmt>(stmt);
+            TheRewriter.InsertTextBefore(ifStmt->getBeginLoc(), "/*Before if statement*/\n  ");
+            TheRewriter.InsertTextAfter(ifStmt->getEndLoc().getLocWithOffset(1), "\n  /*After if statement*/\n");
+        }
+        return true;
+}
+```
+If we execute the above example on the code below:
+```c
+int main() {
+  int a = 5;
+  if (a > 5){
+    a += 1;
+  }
+  else{
+    a -= 1;
+  }
+  return 0;
+}
+```
+The output file will be:
+```c
+int main() {
+  int a = 5;
+  /*Before if statement*/
+  if (a > 5){
+    a += 1;
+  }
+  else{
+    a -= 1;
+  }
+  /*After if statement*/
+
+  return 0;
+}
+```
+Note: ```getEndLoc()``` function points to the token right before the end of the statement/expression. If we use it as it is in the above example "After if statement" comment will actually be before the closing bracket of the else statement. Thus, we use the ```getLocWithOffset()``` function to obtain the desired location. ```getLocWithOffset()``` function moves the current location by the amount provided to the function. Negative argument will go backwards and positive arguments will go forward.  
+
+## Getting Information of Statements and Expressions
+
+_________
+### ```Expr* IfStmt::getCond()```
+### ```Expr* ForStmt::getCond()```
+_________
+Obtains the conditional expression in statements such as If, For and etc. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if(isa<IfStmt>(stmt)){
             auto ifStmt = dyn_cast<IfStmt>(stmt);
-            Expr * = ifStmt->getCond();
+            Expr * cond= ifStmt->getCond();
         }
         return true;
 }
 ```
 _________
-### ```Stmt* getThen(), Stmt* getElse()``` <a name="api10"></a>
+### ```Stmt* IfStmt::getThen()```
+### ```Stmt* IfStmt::getElse()```
 _________
-This function can be used to obtain then and else part of the if condition. Usage:
+Obtains then and else part of the if condition. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if(isa<IfStmt>(stmt)){
@@ -369,52 +399,51 @@ a > 4
 }
 ```
 _________
-### ```Expr* getSubExpr()``` <a name="api11"></a>
+
+### ```Stmt* getBody()```
 _________
-This base expression used in the dereferencing expression, such as ```*pointer``` -> ```getSubExpr``` will give you ```pointer```. Usage:
+Obtains the body of a given statement. Can be applied to loops and functions. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
-        if (isa<UnaryOperator>(stmt)) {
-            UnaryOperator * unaryexpr = dyn_cast<UnaryOperator>(stmt);
+        if (isa<ForStmt>(stmt)){
+            ForStmt * forStmt = dyn_cast<ForStmt>(stmt);
+            Stmt* body = forStmt->getBody();
 
-            if (unaryexpr->getOpcode() == UnaryOperatorKind::UO_Deref) {
-                
-                std::string expr_str;
-                llvm::raw_string_ostream os1(expr_str);
-                expr_str->printPretty(os1, NULL, LangOpts);
-                llvm::outs() << os1.str() << "\n\n";
-
-                Expr * subexpr = unaryexpr->getSubExpr();
-                std::string pointer_str;
-                llvm::raw_string_ostream os(pointer_str);
-                subexpr->printPretty(os, NULL, LangOpts);
-                llvm::outs() << os.str() << "\n\n";
-            }
+            std::string body_str;
+            llvm::raw_string_ostream os(body_str);
+            body->printPretty(os, NULL, LangOpts);
+            llvm::outs() << os.str() << "\n\n";
         }
         return true;
 }
 ```
-if we execute the above example on the code below:
+If we execute the above example on the code below:
 ```c
-
 int main() {
-  int a = 4;
-  int* pointer = &a;
-  *pointer = 5;
+  int a = 5;
+  int b = 10;
+  int i;
+  for (i = 0; i < 10; i++){
+    a += 1;
+    b += 2;
+  }
+  
   return 0;
 }
 ```
 The output will be:
 ```
-*pointer
-
-pointer
+{
+    a += 1;
+    b += 2;
+}
 ```
+
 _________
 
-### ```Stmt* getSubStmt()``` <a name="api12"></a>
+### ```Stmt* SwitchCase::getSubStmt()```
 _________
-Use this function to get the statement block that corresponds to the switch case. Usage:
+Gets the statement block that corresponds to the switch case. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<SwitchCase>(stmt)) {
@@ -456,9 +485,9 @@ a = 0
 ```
 _________
 
-### ```SwitchCase* SwitchStmt.getSwitchCaseList(), SwitchCase* SwitchCase.getNextSwitchCase()``` <a name="api13"></a>
+### ```SwitchCase* SwitchStmt::getSwitchCaseList(), SwitchCase* SwitchCase::getNextSwitchCase()```
 _________
-Use these functions to iterate through the cases of the switch statement. Usage:
+Iterates through the cases of the switch statement. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<SwitchStmt>(stmt)) {
@@ -509,11 +538,48 @@ a *= 2;
 case 1:
 a += 1;
 ```
+
+_________
+### ```Expr* MemberExpr::getBase()```
+### ```Expr* ArraySubscriptExpr::getBase()```
+_________
+Obtains base expression if the target expression is MemberExpr, ArraySubscriptExpr. Usage:
+```C++
+bool VisitStmt(Stmt *stmt) {
+        if (isa<MemberExpr>(stmt)){
+            MemberExpr* expr = dyn_cast<MemberExpr>(stmt);
+            auto t = expr->getType().getAsString();
+            auto t_base = expr->getBase()->getType().getAsString();
+
+            llvm::outs() << t << "\n";
+            llvm::outs() << t_base << "\n";
+        }
+        return true;
+}
+```
+If we execute the above example on the code below:
+```c
+struct a {
+  int b;
+};
+
+int main() {
+  struct a * aptr;
+  aptr->b = 5;
+  return 0;
+}
+```
+The output will be (```expr->getBase()``` points to ```aptr```):
+```
+int
+struct a *
+```
+
 _________
 
-### ```DeclarationNameInfo* MemberExpr.getMemberNameInfo()``` <a name="api14"></a>
+### ```DeclarationNameInfo* MemberExpr::getMemberNameInfo()```
 _________
-To obtain information about the member variable. Usage:
+Obtains information about the member variable. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<MemberExpr>(stmt)){
@@ -542,7 +608,7 @@ myCustomVariable
 ```
 _________
 
-### ```bool MemberExpr.isArrow()``` <a name="api15"></a>
+### ```bool MemberExpr::isArrow()```
 _________
 To learn whether the member access is arrow or dot access. Usage:
 ```C++
@@ -580,82 +646,52 @@ The output will be:
 We got the member access with dot
 We got the memeber access with arrow
 ```
-_________
 
-### ```Stmt* getBody()``` <a name="api16"></a>
 _________
-To obtain the body of a given statement. Can be applied to loops, functions. Usage:
+### ```Expr* getSubExpr()```
+_________
+This base expression used in the dereferencing expression, such as ```*pointer``` -> ```getSubExpr``` will give you ```pointer```. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
-        if (isa<ForStmt>(stmt)){
-            ForStmt * forStmt = dyn_cast<ForStmt>(stmt);
-            Stmt* body = forStmt->getBody();
+        if (isa<UnaryOperator>(stmt)) {
+            UnaryOperator * unaryexpr = dyn_cast<UnaryOperator>(stmt);
 
-            std::string body_str;
-            llvm::raw_string_ostream os(body_str);
-            body->printPretty(os, NULL, LangOpts);
-            llvm::outs() << os.str() << "\n\n";
+            if (unaryexpr->getOpcode() == UnaryOperatorKind::UO_Deref) {
+                
+                std::string expr_str;
+                llvm::raw_string_ostream os1(expr_str);
+                expr_str->printPretty(os1, NULL, LangOpts);
+                llvm::outs() << os1.str() << "\n\n";
+
+                Expr * subexpr = unaryexpr->getSubExpr();
+                std::string pointer_str;
+                llvm::raw_string_ostream os(pointer_str);
+                subexpr->printPretty(os, NULL, LangOpts);
+                llvm::outs() << os.str() << "\n\n";
+            }
         }
         return true;
 }
 ```
-If we execute the above example on the code below:
+if we execute the above example on the code below:
 ```c
+
 int main() {
-  int a = 5;
-  int b = 10;
-  int i;
-  for (i = 0; i < 10; i++){
-    a += 1;
-    b += 2;
-  }
-  
+  int a = 4;
+  int* pointer = &a;
+  *pointer = 5;
   return 0;
 }
 ```
 The output will be:
 ```
-{
-    a += 1;
-    b += 2;
-}
+*pointer
+
+pointer
 ```
+
 _________
-### ```bool SourceLocation.isValid()``` <a name="api17"></a>
-_________
-Return true if the given ```SourceLocation``` object is valid . Usage:
-```C++
-bool VisitStmt(Stmt *stmt) {
-        SourceLocation loc = stmt->getBeginLoc();
-        if (loc.isValid()){
-          llvm::outs() << "Got valid SourceLocation object\n";
-        }
-        else{
-          llvm::outs() << "Invalid SourceLocation\n";
-        }
-        return true;
-}
-```
-If we execute the above example on the code below:
-```c
-int main() {
-  int a = 5;
-  int b = 10;
-  return 0;
-}
-```
-The output will be:
-```
-Got valid SourceLocation object
-Got valid SourceLocation object
-Got valid SourceLocation object
-Got valid SourceLocation object
-Got valid SourceLocation object
-Got valid SourceLocation object
-Got valid SourceLocation object
-```
-_________
-### ```Stmt* FunctionDecl.getBody(), bool FunctionDecl.hasBody(), string FunctionDecl.getName()``` <a name="api18"></a>
+### ```Stmt* FunctionDecl::getBody(), bool FunctionDecl::hasBody(), string FunctionDecl::getName()```
 _________
 These functions can be used to obtain information about the given function. Usage:
 ```C++
@@ -705,9 +741,9 @@ main
 }
 ```
 _________
-### ```bool FunctionDecl.isMain()``` <a name="api19"></a>
+### ```bool FunctionDecl::isMain()```
 _________
-To check whether the current function is main. Usage:
+Checks whether the current function is main. Usage:
 ```C++
 bool VisitFunctionDecl(FunctionDecl *f) {
         
@@ -740,24 +776,22 @@ The output will be:
 Not the main function
 Got the main function
 ```
+
+## Type Checking and Casting
+
 _________
-### ```SourceLocation findLocationAfterToken(SourceLocation, tok::TokenKind, const SourceManager &, const LangOptions &, bool )``` <a name="api20"></a>
+
+### ```bool isa<StmtType>(Stmt *stmt), bool isa<ExprType>(Stmt *stmt)```
 _________
-Returns the location immediately after the specified token, if the token is right after the given location. Usage:
+Obtains the information about the type of the statement or expression, such as IfStmt, WhileStmt. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
-        tok::TokenKind tokenKind = clang::tok::semi;
-        unsigned int lineNum = m_sourceManager.getExpansionLineNumber(stmt->getBeginLoc());
-        unsigned int columnNum = m_sourceManager.getExpansionColumnNumber(stmt->getBeginLoc());
-        llvm::outs() << lineNum << ", " << columnNum << "\n";
-        SourceLocation next_after_loc = clang::Lexer::findLocationAfterToken(stmt->getBeginLoc(), tokenKind, m_sourceManager, LangOpts, false);
-        if (next_after_loc.isInvalid()){
-          llvm::outs() << "Invalid SourceLocation\n";
+        if (isa<IfStmt>(stmt)){
+            llvm::outs() << "You have reached if statement\n";
         }
-        else{
-          lineNum = m_sourceManager.getExpansionLineNumber(next_after_loc);
-          columnNum = m_sourceManager.getExpansionColumnNumber(next_after_loc);
-          llvm::outs() << lineNum << ", " << columnNum << "\n\n\n";
+
+        if (isa<ArraySubscriptExpr>(stmt)){
+            llvm::outs() << "You have reached array subscript expression\n";
         }
         return true;
 }
@@ -765,42 +799,55 @@ bool VisitStmt(Stmt *stmt) {
 If we execute the above example on the code below:
 ```c
 int main() {
+
   int a = 5;
+  if (a > 3) {
+    a += 1;
+  }
+
+  if (a < 6){
+    a -= 1;
+  }
+  else{
+    a += 1;
+  }
+
+  int intarr[10][10];
+
+  *intarr[1] = 42;
   return 0;
 }
 ```
 The output will be:
 ```
-1, 12 -> Beginning of the main function, the opening bracket of the function, next token is not semicolon, return Invalid SourceLocation
-Invalid SourceLocation
-
-
-2, 3 -> Beginning of the variable declaration, next token is not semicolon, return Invalid SourceLocation
-Invalid SourceLocation
-
-
-2, 11 -> The integer literal at line 2, column 11 (5), next token is semicolon, return the SourceLocation right after semicolon
-2, 13
-
-
-3, 3 -> Beginning of the return statement, next token is not semicolon, return Invalid SourceLocation
-Invalid SourceLocation
-
-
-3, 10 -> The integer literal at line 3, column 10 (0) next token is semicolon, return the SourceLocation right after semicolon
-3, 12
+You have reached if statement
+You have reached if statement
+You have reached array subscript expression
 ```
 _________
 
-### ```bool Rewriter.InsertTextBefore(SourceLocation, string), bool Rewriter.InsertTextAfter(SourceLocation, string)``` <a name="api21"></a>
+### ```ExprType* dyn_cast<ExprType>(Stmt *stmt)```
 _________
-You can utilize these functions to modify the target source file. Usage:
+Casts a statement to an inherited statement type, such as ```Stmt*``` -> ```IfStmt*```. This can also be applied to cast Stmt to underlying expression such as, ```Stmt*``` -> ```MemberExpr*```. Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
-        if (isa<IfStmt>(stmt)){
-            IfStmt * ifStmt = dyn_cast<IfStmt>(stmt);
-            TheRewriter.InsertTextBefore(ifStmt->getBeginLoc(), "/*Before if statement*/\n  ");
-            TheRewriter.InsertTextAfter(ifStmt->getEndLoc().getLocWithOffset(1), "\n  /*After if statement*/\n");
+        IfStmt* ifStmt = dyn_cast<IfStmt>(statement);
+        return true;
+}
+```
+_________
+### ```QualType Expr::getType()```
+_________
+Obtains type of the given object. Use ```getAsString()``` function to obtain type in string form. Not applicable to ```Stmt``` objects. Usage:
+```C++
+bool VisitStmt(Stmt *stmt) {
+        if (isa<ArraySubscriptExpr>(stmt)){
+            ArraySubscriptExpr* expr = dyn_cast<ArraySubscriptExpr>(stmt);
+            auto t = expr->getType().getAsString();
+            auto t_base = expr->getBase()->getType().getAsString();
+
+            llvm::outs() << t << "\n";
+            llvm::outs() << t_base << "\n";
         }
         return true;
 }
@@ -808,32 +855,15 @@ bool VisitStmt(Stmt *stmt) {
 If we execute the above example on the code below:
 ```c
 int main() {
-  int a = 5;
-  if (a > 5){
-    a += 1;
-  }
-  else{
-    a -= 1;
-  }
+  int intarr[10];
+  intarr[1] = 42;
   return 0;
 }
 ```
-The output file will be:
-```c
-int main() {
-  int a = 5;
-  /*Before if statement*/
-  if (a > 5){
-    a += 1;
-  }
-  else{
-    a -= 1;
-  }
-  /*After if statement*/
+The output will be (```expr``` variable points to the whole expression ```intarr[1]``` which is integer, whereas ```expr->getBase()``` points to ```intarr```):
+```
+int
+int *
+```
 
-  return 0;
-}
-```
-Note: ```getEndLoc()``` function points to the token right before the end of the statement/expression. If we use it as it is in the above example "After if statement" comment will actually be before the closing bracket of the else statement. Thus, we use the ```getLocWithOffset()``` function to obtain the desired location. ```getLocWithOffset()``` function moves the current location by the amount provided to the function. Negative argument will go backwards and positive arguments will go forward.  
-_________
 
