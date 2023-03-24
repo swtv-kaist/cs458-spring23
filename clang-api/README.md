@@ -14,8 +14,7 @@ This is a list of useful clang APIs for clang instrumentation homework. For more
   - [```bool Rewriter::InsertTextAfter(SourceLocation Loc, string text)```](#bool-rewriterinserttextaftersourcelocation-loc-string-text)
 - [Getting Information of Statements and Expressions](#getting-information-of-statements-and-expressions)
   - Loop and Conditional Statements
-    - [```Expr* IfStmt::getCond()```](#expr-ifstmtgetcond)
-    - [```Expr* ForStmt::getCond()```](#expr-forstmtgetcond)
+    - [```Expr* getCond()```](#expr-getcond)
     - [```Stmt* IfStmt::getThen()```](#stmt-ifstmtgetthen)
     - [```Stmt* IfStmt::getElse()```](#stmt-ifstmtgetelse)
     - [```Stmt* getBody()```](#stmt-getbody)
@@ -324,8 +323,7 @@ Note: ```getEndLoc()``` function points to the token right before the end of the
 ## Getting Information of Statements and Expressions
 
 _________
-### ```Expr* IfStmt::getCond()```
-### ```Expr* ForStmt::getCond()```
+### ```Expr* getCond()```
 _________
 Obtains the conditional expression in statements such as If, For and etc. Usage:
 ```C++
