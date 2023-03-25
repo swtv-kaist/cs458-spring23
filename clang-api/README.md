@@ -1,5 +1,16 @@
 # CS458 Clang API Documentation
 
+## Testing the APIs yourself
+If you want to test the below API functions yourselves, and see how they work, you can use the ```target.c```, ```testing.cpp```, ```Makefile``` files in the repository. To test the API functions:
+ * Replace the code in the ```target.c``` file with the relevant target example given for each API
+ * Replace the ```VisitStmt()``` in the testing.cpp file with the ```VisitStmt()``` given in each example (leave the ```VisitFunctionDecl()``` empty with ```return true```)
+   * If you test the APIs regarding FunctionDecl, do the same as above but change the ```VisitFunctionDecl()``` instead of ```VisitStmt()``` and leave ```VisitStmt()``` empty with ```return true```.
+ * Build the ```testing.cpp``` buy running ```make``` command
+ * Run the following command to execute the examples on the target code: ```./testing target.c```
+ 
+
+## CLang APIs descriptions
+
 This is a list of useful clang APIs for clang instrumentation homework. For more general info, check https://clang.llvm.org/doxygen.
 
 
