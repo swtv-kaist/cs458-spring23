@@ -9,7 +9,7 @@ If you want to test the below API functions yourselves, and see how they work, y
  * Run the following command to execute the examples on the target code: ```./testing target.c```
  
 
-## CLang APIs descriptions
+## Clang APIs descriptions
 
 This is a list of useful clang APIs for clang instrumentation homework. For more general info, check https://clang.llvm.org/doxygen.
 
