@@ -875,7 +875,9 @@ _________
 
 ### ```ExprType* dyn_cast<ExprType>(Stmt *stmt)```
 _________
-Casts a statement to an inherited statement type, such as ```Stmt*``` -> ```IfStmt*```. This can also be applied to cast Stmt to underlying expression such as, ```Stmt*``` -> ```MemberExpr*```. Usage:
+Casts a statement to an inherited statement type, such as ```Stmt*``` -> ```IfStmt*```. This can also be applied to cast Stmt to underlying expression such as, ```Stmt*``` -> ```MemberExpr*```. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         IfStmt* ifStmt = dyn_cast<IfStmt>(statement);
