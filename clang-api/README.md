@@ -49,7 +49,9 @@ This is a list of useful clang APIs for clang instrumentation homework. For more
 _________
 ### ```string Stmt::getStmtClassName()```
 _________
-To obtain a name of a statment class (e.g., ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```). Usage:
+It obtains a name of a statment class (e.g., ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```).
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         auto stmtName = stmt->getStmtClassName();
@@ -89,7 +91,9 @@ ________
 ### `void Stmt::printPretty(raw_ostream &OS, PrinterHelper *Helper, const PrintingPolicy &Policy)`
 ________
 
-Prints the statement/expression as it is.
+It prints the statement/expression as it is.
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         std::string str1;
@@ -99,7 +103,7 @@ bool VisitStmt(Stmt *stmt) {
         return true;
 }
 ```
-If we execute the above example in the code below, when ```*stmt``` points to the if statement:
+If we execute the above example for the code below with a parameter ```*stmt``` that points to the ```if``` statement:
 ```c
 int main() {
   int a = 5;
@@ -125,11 +129,11 @@ _________
 
 ### ```SourceLocation Stmt::getBeginLoc(), SourceLocation Stmt::getEndLoc()``` <a name="api3"></a>
 _________
-Using this functions, you can get SourceLocation object that points to the beginning and the end of given statement. To get the line and column information, use the following functions:
+These 2 functions get ```SourceLocation``` object that points to the beginning or the end of a given statement. To get the line and column information, use the following functions:
 - `SourceManager::getExpansionLineNumber(SourceLocation loc)`
 - `SourceManager::getExpansionColumnNumber(SourceLocation loc)`
 
-Usage:
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         SourceLocation startLocation = stmt->getBeginLoc();
