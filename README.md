@@ -37,6 +37,7 @@
     - Hint: many questions of exams are from the homeworks.
   - All programming HWs you submit must be able to be replayed by executing a single script file on a TA's server account (i.e., submitted HW should not have a dependency on your home directory, environment, etc.).  Also, the replayed execution must demonstrate the same output to the submitted hw. You will get 10% penalty of the max score otherwise.
   - For your programming HWs, you should not use external libraries which are not available on the server machines.  If you really need an external library, you have to ask TAs to install it on the server machines.
+  - Please, write your studnet ID in the name of your submiited file(s), so that TAs can easily identify which files are yours.
   
 - Questions on the course materials and homeworks should be posted as github issues 
   - https://github.com/swtv-kaist/cs458-spring23/issues 
