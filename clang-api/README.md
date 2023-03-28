@@ -49,7 +49,7 @@ This is a list of useful clang APIs for clang instrumentation homework. For more
 _________
 ### ```string Stmt::getStmtClassName()```
 _________
-It obtains a name of a statment class (e.g., ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```).
+Obtains a name of a statment class (e.g., ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```).
 
 Example:
 ```C++
@@ -91,7 +91,7 @@ ________
 ### `void Stmt::printPretty(raw_ostream &OS, PrinterHelper *Helper, const PrintingPolicy &Policy)`
 ________
 
-It prints the statement/expression as it is.
+Prints the statement/expression as it is.
 
 Example:
 ```C++
@@ -117,7 +117,8 @@ int main() {
   return 0;
 }
 ```
-Output will be:
+
+The output will be:
 ```
 if (a > b) {
     a += 1;
@@ -129,7 +130,7 @@ _________
 
 ### ```SourceLocation Stmt::getBeginLoc(), SourceLocation Stmt::getEndLoc()``` <a name="api3"></a>
 _________
-These 2 functions get ```SourceLocation``` object that points to the beginning or the end of a given statement. To get the line and column information, use the following functions:
+Get ```SourceLocation``` object that points to the beginning or the end of a given statement. To get the line and column information, use the following functions:
 - `SourceManager::getExpansionLineNumber(SourceLocation loc)`
 - `SourceManager::getExpansionColumnNumber(SourceLocation loc)`
 
@@ -168,7 +169,9 @@ The output will be:
 _________
 ### ```SourceLocation getLParenLoc(), SourceLocation getRParenLoc()``` <a name="api8"></a>
 _________
-These functions will return the location of the left and right paranthese if the statement has those. Not applicable to all statement, can be used with IfStmt, ForStmt and etc. Usage:
+Return the location of the left and right paranthese if the statement has it. They can be used for IfStmt, ForStmt and so on (not  applicable to all types of statements). 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if(isa<IfStmt>(stmt)){
@@ -205,7 +208,9 @@ The output will be:
 _________
 ### ```bool SourceLocation::isValid()``` <a name="api17"></a>
 _________
-Returns true if the given ```SourceLocation``` object is valid . Usage:
+Returns true if a given ```SourceLocation``` object is valid. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         SourceLocation loc = stmt->getBeginLoc();
@@ -218,6 +223,7 @@ bool VisitStmt(Stmt *stmt) {
         return true;
 }
 ```
+
 If we execute the above example on the code below:
 ```c
 int main() {
@@ -241,7 +247,9 @@ _________
 ### `SourceLocation Lexer::findLocationAfterToken(SourceLocation Loc, tok::TokenKind TKind, const SourceManager &SM, const LangOptions &LangOpts, bool SkipTrailingWhitespaceAndNewLine)`
 ________
 
-Returns the location immediately after the specified token, if the token is right after the given location. Usage:
+Returns the location immediately after the specified token, if the token is right after the given location.  
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         tok::TokenKind tokenKind = clang::tok::semi;
@@ -293,7 +301,9 @@ _________
 ### ```bool Rewriter::InsertTextBefore(SourceLocation Loc, string text)```
 ### ```bool Rewriter::InsertTextAfter(SourceLocation Loc, string text)```
 _________
-You can utilize these functions to modify the target source file. Usage:
+Modify a target source code.  
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<IfStmt>(stmt)){
@@ -340,7 +350,9 @@ Note: ```getEndLoc()``` function points to the token right before the end of the
 _________
 ### ```Expr* getCond()```
 _________
-Obtains the conditional expression in statements such as If, For and etc. Usage:
+Obtains the conditional expression in statements such as If, For and etc. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if(isa<IfStmt>(stmt)){
@@ -354,7 +366,9 @@ _________
 ### ```Stmt* IfStmt::getThen()```
 ### ```Stmt* IfStmt::getElse()```
 _________
-Obtains then and else part of the if condition. Usage:
+Obtains then and else part of the if condition. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if(isa<IfStmt>(stmt)){
@@ -415,7 +429,9 @@ _________
 
 ### ```Stmt* getBody()```
 _________
-Obtains the body of a given statement. Can be applied to loops and functions. Usage:
+Obtains the body of a given statement. Can be applied to loops and functions.  
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<ForStmt>(stmt)){
@@ -456,7 +472,9 @@ _________
 
 ### ```Stmt* SwitchCase::getSubStmt()```
 _________
-Gets the statement block that corresponds to the switch case. Usage:
+Gets the statement block that corresponds to the switch case. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<SwitchCase>(stmt)) {
@@ -500,7 +518,9 @@ _________
 
 ### ```SwitchCase* SwitchStmt::getSwitchCaseList(), SwitchCase* SwitchCase::getNextSwitchCase()```
 _________
-Iterates through the cases of the switch statement. Usage:
+Iterates through the cases of the switch statement. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<SwitchStmt>(stmt)) {
@@ -556,7 +576,9 @@ _________
 ### ```Expr* MemberExpr::getBase()```
 ### ```Expr* ArraySubscriptExpr::getBase()```
 _________
-Obtains base expression if the target expression is MemberExpr, ArraySubscriptExpr. Usage:
+Obtains base expression if the target expression is MemberExpr, ArraySubscriptExpr. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<MemberExpr>(stmt)){
@@ -592,7 +614,9 @@ _________
 
 ### ```DeclarationNameInfo* MemberExpr::getMemberNameInfo()```
 _________
-Obtains information about the member variable. Usage:
+Obtains information about the member variable. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<MemberExpr>(stmt)){
@@ -623,7 +647,9 @@ _________
 
 ### ```bool MemberExpr::isArrow()```
 _________
-To learn whether the member access is arrow or dot access. Usage:
+To learn whether the member access is arrow or dot access. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<MemberExpr>(stmt)){
@@ -663,7 +689,9 @@ We got the memeber access with arrow
 _________
 ### ```Expr* getSubExpr()```
 _________
-This base expression used in the dereferencing expression, such as ```*pointer``` -> ```getSubExpr``` will give you ```pointer```. Usage:
+This base expression used in the dereferencing expression, such as ```*pointer``` -> ```getSubExpr``` will give you ```pointer```. 
+
+Example:  
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<UnaryOperator>(stmt)) {
@@ -706,7 +734,9 @@ pointer
 _________
 ### ```Stmt* FunctionDecl::getBody(), bool FunctionDecl::hasBody(), string FunctionDecl::getName()```
 _________
-These functions can be used to obtain information about the given function. Usage:
+These functions can be used to obtain information about the given function. 
+
+Example:
 ```C++
 bool VisitFunctionDecl(FunctionDecl *f) {
         
@@ -756,7 +786,9 @@ main
 _________
 ### ```bool FunctionDecl::isMain()```
 _________
-Checks whether the current function is main. Usage:
+Checks whether the current function is main. 
+
+Example:
 ```C++
 bool VisitFunctionDecl(FunctionDecl *f) {
         
@@ -796,7 +828,9 @@ _________
 
 ### ```bool isa<StmtType>(Stmt *stmt), bool isa<ExprType>(Stmt *stmt)```
 _________
-Obtains the information about the type of the statement or expression, such as IfStmt, WhileStmt. Usage:
+Obtains the information about the type of the statement or expression, such as IfStmt, WhileStmt. 
+
+Example:  
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<IfStmt>(stmt)){
@@ -851,7 +885,9 @@ bool VisitStmt(Stmt *stmt) {
 _________
 ### ```QualType Expr::getType()```
 _________
-Obtains type of the given object. Use ```getAsString()``` function to obtain type in string form. Not applicable to ```Stmt``` objects. Usage:
+Obtains type of the given object. Use ```getAsString()``` function to obtain type in string form. Not applicable to ```Stmt``` objects. 
+
+Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         if (isa<ArraySubscriptExpr>(stmt)){
