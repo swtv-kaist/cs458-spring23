@@ -49,7 +49,7 @@ This is a list of useful clang APIs for clang instrumentation homework. For more
 _________
 ### ```string Stmt::getStmtClassName()```
 _________
-For obtaining the statment class, examples include ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```. Usage:
+To obtain a name of a statment class (e.g., ```"IfStmt"```, ```"WhileStmt"```, ```"SwitchStmt"```). Usage:
 ```C++
 bool VisitStmt(Stmt *stmt) {
         auto stmtName = stmt->getStmtClassName();
