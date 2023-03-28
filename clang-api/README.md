@@ -355,12 +355,31 @@ Obtains the conditional expression in statements such as If, For and etc.
 Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
-        if(isa<IfStmt>(stmt)){
-            auto ifStmt = dyn_cast<IfStmt>(stmt);
-            Expr * cond= ifStmt->getCond();
+        if(isa<WhileStmt>(stmt)){
+            auto whileStmt = dyn_cast<WhileStmt>(stmt);
+            Expr * cond= whileStmt->getCond();
+
+            std::string str1;
+            llvm::raw_string_ostream os(str1);
+            cond->printPretty(os, NULL, LangOpts);
+            llvm::outs() << os.str() << "\n";
         }
         return true;
 }
+```
+If we execute the above example on the code below:
+```c
+int main() {
+  int a = 5;
+  while (a < 10){
+    a += 1;
+  }
+  return 0;
+}
+```
+The output will be:
+```
+a < 10
 ```
 _________
 ### ```Stmt* IfStmt::getThen()```
@@ -880,7 +899,19 @@ Casts a statement to an inherited statement type, such as ```Stmt*``` -> ```IfSt
 Example:
 ```C++
 bool VisitStmt(Stmt *stmt) {
-        IfStmt* ifStmt = dyn_cast<IfStmt>(statement);
+        if(isa<WhileStmt>(stmt)){
+            Expr* cond = stmt->getCond();
+        }
+        return true;
+}
+```
+If we try to execute the above code, there will be an compilation error because clang::Stmt does not have a member function called ```getCond()```. Correct usage would be like below:
+```C++
+bool VisitStmt(Stmt *stmt) {
+        if(isa<WhileStmt>(stmt)){
+            auto whileStmt = dyn_cast<WhileStmt>(stmt);
+            Expr * cond= whileStmt->getCond();
+        }
         return true;
 }
 ```
