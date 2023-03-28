@@ -5,7 +5,7 @@ If you want to test the below API functions yourselves, and see how they work, y
  * Replace the code in the ```target.c``` file with the relevant target example given for each API
  * Replace the ```VisitStmt()``` in the testing.cpp file with the ```VisitStmt()``` given in each example (leave the ```VisitFunctionDecl()``` empty with ```return true```)
    * If you test the APIs regarding FunctionDecl, do the same as above but change the ```VisitFunctionDecl()``` instead of ```VisitStmt()``` and leave ```VisitStmt()``` empty with ```return true```.
- * Build the ```testing.cpp``` buy running ```make``` command
+ * Build the ```testing.cpp``` by running ```make``` command
  * Run the following command to execute the examples on the target code: ```./testing target.c```
  
 
