@@ -94,7 +94,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
    
 - Mar 23: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx) [[pdf]](2-coverage/lec8-building-Clang-analyzer-v3.pdf)
   - [PrintFunction.cpp](https://github.com/swtv-kaist/cs458-spring23/blob/main/2-coverage/code/clang/PrintFunction.cpp)
-  - [Document for useful clang APIs](https://github.com/swtv-kaist/cs458-spring23/tree/clang-api/clang-api)
+  - [Document for useful clang APIs](https://github.com/swtv-kaist/cs458-spring23/tree/main/clang-api)
   
 
 - Mar 28: [Logic coverage](2-coverage/lec9-Logic-covearge-v3.pptx) [[pdf]](2-coverage/lec9-Logic-covearge-v3.pdf)
