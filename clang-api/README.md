@@ -44,6 +44,33 @@ This is a list of useful clang APIs for clang instrumentation homework. For more
   - [```bool isa<StmtType>(Stmt *stmt), bool isa<ExprType>(Stmt *stmt)```](#bool-isastmttypestmt-stmt-bool-isaexprtypestmt-stmt)
   - [```ExprType* dyn_cast<ExprType>(Stmt *stmt)```](#exprtype-dyn_castexprtypestmt-stmt)
   - [```QualType Expr::getType()```](#qualtype-exprgettype)
+  
+- Etc.
+  - HandleTopLevelDecl
+  - InsertTextAfter
+  - InsertTextAfterToken
+  - InsertTextBefore
+  - TraverseDecl
+  - VisitFunctionDecl
+  - VisitStmt
+  - dyn_cast  
+  - exprToStr
+  - getASTContext
+  - getAsFunction  // FunctionDecl *f = (*b)->getAsFunction();
+  - getColonLoc
+  - getEditBuffer
+  - getFalseExpr
+  - getFile
+  - getImmediateMacroCallerLoc
+  - getInit
+  - getLocForEndOfToken
+  - getMainFileID
+  - getPreprocessor
+  - getSourceManager 
+  - getSourceMgr  
+  - getTrueExpr
+  - isMacroID
+  
 
 ## Source Code Printing and Instrumentation
 _________
