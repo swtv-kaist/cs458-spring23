@@ -92,7 +92,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
    - [gcc manual](https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html), [gcov manual](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)
    - Clang for LLVM, Clang tutorial (code)
 - Mar 23: [Clang tutorial 2/2: a program analysis tool by using Clang](2-coverage/lec8-building-Clang-analyzer-v3.pptx) [[pdf]](2-coverage/lec8-building-Clang-analyzer-v3.pdf)
-  - Document for useful clang APIs: https://github.com/swtv-kaist/cs458-spring23/tree/clang-api/clang-api
+  - [Document for useful clang APIs](https://github.com/swtv-kaist/cs458-spring23/tree/clang-api/clang-api)
   - PrintFunction.zip
   
 
