@@ -71,7 +71,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
  
 
-### Part II: Source Code Coverage Criteria for Effective SW Debugging
+### Part II: Source Code Coverage Criteria for Effective SW Testing
 
 *“It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free.”— Steve McConnell*
 
