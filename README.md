@@ -101,30 +101,36 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - [Example](2-coverage/lec9.5-ACC-ICC-example.pptx) [[pdf]](2-coverage/lec9.5-ACC-ICC-example.pdf)
 - Apr 4:  [Logic coverage from source code](2-coverage/lec10-logic-covearge-code-v2.pptx) [[pdf]](2-coverage/lec10-logic-covearge-code-v2.pdf)
 
-- Apr 6: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf),  Q&A session for coverage guided whitebox testing
-  - "Design Of Mutant Operators For The C Programming Language" by Agrawal et al
+- Apr 6: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf) 
+  - ["Design Of Mutant Operators For The C Programming Language" by Agrawal et al](2-coverage/mutop-design-harness.pdf)
 
-### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
-- Apr 11: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
+- Apr 11: [LLVM IR](2-coverage/lec12-llvm-ir.pptx) [[pdf]]((2-coverage/lec12-llvm-ir.pdf), [LLVM pass](2-coverage/lec13-llvm-pass.pptx) [[pdf]](2-coverage/lec13-llvm-pass.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx)[[pdf]] (2-coverage/lec14-clang-vs-llvm.pdf)
 
-- Apr 13: AFL++ (american fuzzy lop) fuzzer tutorial
+- Apr 13: Q&A for midterm exam
 
 - **Apr 18: Midterm exam (closed book)**
 
-- Apr 25: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
+### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
+- Apr 25, 27: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
+
+- May 2: AFL++ (american fuzzy lop) fuzzer tutorial
+
+
+
+- May 4, 9: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
-- Apr 27: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
+- May 11: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
   - triangle.c example
 
-- May 2: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
+- May 16: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
   - crown_examples.zip
   
-- May 4: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
+- May 18: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
 
-- May 9: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
+- May 23: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
 
-- May 11: Industrial case studies (pre-recorded movie clip)
+- May 25: Industrial case studies (pre-recorded movie clip)
   - [Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing](3-fuzz-concolic/lec38-conbol.pptx) [[pdf]](3-fuzz-concolic/lec38-conbol.pdf)  [ASE'13 paper] [[Movie (40 min)]](https://drive.google.com/file/d/10DaVUtSZGJiHhHKe-abez7C3XuFQxoBx/view?usp=share_link)
   - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [[Movie (35min)]](https://drive.google.com/file/d/1G2j92qvfJBkPvIiBIklYE2EWjadEYIiW/view?usp=share_link)
 
@@ -147,16 +153,18 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 ### Part IV: Testing/Verification Engine - SAT/SMT Solver
 
-- June 1: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
+- May 30: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
   - SMTlib examples
   - Examples of First Order Theories [pdf] (for concolic testing, UML OCL, JML, pre/post condition verification, etc)
   - Definition of "theory"
   - CS402 Intro to Logic (Predicate Calculus - Semantics)
   - SMT-competition 2022
 
-- June 8: [Using SAT solver for Sudoku](5-smt/lec44-sudoku-v2.pptx) [[pdf]](5-smt/lec44-sudoku-v2.pdf), Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
+- June 1: [Using SAT solver for Sudoku](5-smt/lec44-sudoku-v2.pptx) [[pdf]](5-smt/lec44-sudoku-v2.pdf), Q&A for the final exam, LLVM IR basics, CLANG vs LLVM
   - "Sudoku as a SAT problem" by I.Lynce and J.Ouaknine, Intl. Symp. on Artificial Intelligence and Mathematics 2006
   - The SuDoku Puzzle as a Satisfiability Problem
+
+- June 8: Q&A for final exam
 
 - **June 13:  Final exam (closed book)**
 
