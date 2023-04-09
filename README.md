@@ -111,19 +111,19 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - **Apr 18: Midterm exam (closed book)**
 
 ### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
-- Apr 25: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
+- Apr 25, 27: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
 
-- Apr 27: AFL++ (american fuzzy lop) fuzzer tutorial
+- May 2: AFL++ (american fuzzy lop) fuzzer tutorial
 
 
 
-- May 2, 4: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
+- May 4, 9: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
-- May 9: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
+- May 11: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
   - triangle.c example
 
-- May 11: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
+- May 16: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
   - crown_examples.zip
   
 - May 18: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
@@ -153,7 +153,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 ### Part IV: Testing/Verification Engine - SAT/SMT Solver
 
-- May 25, 30: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
+- May 30: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
   - SMTlib examples
   - Examples of First Order Theories [pdf] (for concolic testing, UML OCL, JML, pre/post condition verification, etc)
   - Definition of "theory"
