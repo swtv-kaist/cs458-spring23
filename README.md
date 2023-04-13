@@ -45,6 +45,8 @@
 - Excerpts from 강의평가
     - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
     - "과제가 많이 어려운것 같았다. 과제에 대한 도움을 수업에서 좀 더 주었으면 좋겠다."
+    
+- [Online exam instruction for students w/ COVID-19](online-exam-instructions-v2.pdf)
 
 
 ## Syllabus
