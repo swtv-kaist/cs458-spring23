@@ -45,6 +45,8 @@
 - Excerpts from 강의평가
     - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
     - "과제가 많이 어려운것 같았다. 과제에 대한 도움을 수업에서 좀 더 주었으면 좋겠다."
+    
+- [Online exam instruction for students w/ COVID-19](online-exam-instructions-v2.pdf)
 
 
 ## Syllabus
@@ -104,7 +106,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - Apr 6: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf) 
   - ["Design Of Mutant Operators For The C Programming Language" by Agrawal et al](2-coverage/mutop-design-harness.pdf)
 
-- Apr 11: [LLVM IR](2-coverage/lec12-llvm-ir.pptx) [[pdf]]((2-coverage/lec12-llvm-ir.pdf), [LLVM pass](2-coverage/lec13-llvm-pass.pptx) [[pdf]](2-coverage/lec13-llvm-pass.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx)[[pdf]] (2-coverage/lec14-clang-vs-llvm.pdf)
+- Apr 11: [LLVM IR](2-coverage/lec12-llvm-ir.pptx) [[pdf]](2-coverage/lec12-llvm-ir.pdf), [LLVM pass](2-coverage/lec13-llvm-pass.pptx) [[pdf]](2-coverage/lec13-llvm-pass.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx) [[pdf]](2-coverage/lec14-clang-vs-llvm.pdf)
 
 - Apr 13: Q&A for midterm exam
 
