@@ -111,7 +111,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - Apr 13: Q&A for midterm exam
 
-- **Apr 18: Midterm exam (closed book)**
+- **Apr 18: Midterm exam (closed book) 4:00-5:00 pm**
 
 ### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
 - Apr 25, 27: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
