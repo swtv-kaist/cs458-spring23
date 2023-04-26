@@ -2,7 +2,7 @@
 
 
 ## Announcement
-
+- April 25: No class on May 4 (Thursday). A make-up class schedule will be announced later.
 
 ## Administrative Information
 
