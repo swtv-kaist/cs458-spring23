@@ -73,7 +73,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
  
 
-### Part II: Source Code Coverage Criteria for Effective SW Testing
+### Part II: Source Code Coverage Criteria and Code Analysis Framework  
 
 *“It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free.”— Steve McConnell*
 
@@ -114,7 +114,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - **Apr 18: Midterm exam (closed book) 4:00-5:00 pm**
 
 
-- Apr 27: [LLVM pass](2-coverage/lec13-llvm-pass-v3.pptx) [[pdf]](2-coverage/lec13-llvm-pass-v3.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx) [[pdf]](2-coverage/lec14-clang-vs-llvm.pdf)
+- Apr 25, 27: [LLVM pass](2-coverage/lec13-llvm-pass-v3.pptx) [[pdf]](2-coverage/lec13-llvm-pass-v3.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx) [[pdf]](2-coverage/lec14-clang-vs-llvm.pdf)
   - [Template code for LLVM pass (including a complete intwrite example)](2-coverage/code/llvm/kcov-llvm.tar.gz)
 
 
