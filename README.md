@@ -119,7 +119,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 
 ### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
-- Apr 27, May 2: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
+- May 2: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
 
 - May 4: No class
 
