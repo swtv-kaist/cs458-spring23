@@ -106,19 +106,18 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - Apr 6: [Mutation testing](2-coverage/lec11-mutation-testing-v2.pptx) [[pdf]](2-coverage/lec11-mutation-testing-v2.pdf) 
   - ["Design Of Mutant Operators For The C Programming Language" by Agrawal et al](2-coverage/mutop-design-harness.pdf)
 
-- Apr 11: [LLVM IR](2-coverage/lec12-llvm-ir-v3.pptx) [[pdf]](2-coverage/lec12-llvm-ir-v3.pdf), [LLVM pass](2-coverage/lec13-llvm-pass-v3.pptx) [[pdf]](2-coverage/lec13-llvm-pass-v3.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx) [[pdf]](2-coverage/lec14-clang-vs-llvm.pdf)
+- Apr 11, 25, 27: [LLVM IR](2-coverage/lec12-llvm-ir-v3.pptx) [[pdf]](2-coverage/lec12-llvm-ir-v3.pdf), [LLVM pass](2-coverage/lec13-llvm-pass-v3.pptx) [[pdf]](2-coverage/lec13-llvm-pass-v3.pdf), [Clang vs LLVM IR](2-coverage/lec14-clang-vs-llvm.pptx) [[pdf]](2-coverage/lec14-clang-vs-llvm.pdf)
   - [LLVM Language Reference Manual](https://llvm.org/docs/LangRef.html)
-  - [Template code for LLVM pass (including a complete intwrite example)](2-coverage/code/hw4-llvm-23.04.26.tar.gz)
+  - [Template code for LLVM pass (including a complete intwrite example)](2-coverage/code/llvm/hw4-llvm-23.04.26.tar.gz)
 
 - Apr 13: Q&A for midterm exam
 
 - **Apr 18: Midterm exam (closed book) 4:00-5:00 pm**
 
 ### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
-- Apr 25, 27: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
+- Apr 27, May 2: Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)
 
-- May 2: AFL++ (american fuzzy lop) fuzzer tutorial
-
+- May 4: AFL++ (american fuzzy lop) fuzzer tutorial
 
 
 - May 4, 9: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
