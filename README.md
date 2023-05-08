@@ -2,6 +2,7 @@
 
 
 ## Announcement
+- May 9: No class on May 9 (Tuesday). A make-up class schedule will be announced later.
 - April 25: No class on May 4 (Thursday). A make-up class schedule will be announced later.
 
 ## Administrative Information
@@ -125,7 +126,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - May 4: No class
 
-- May 9: AFL++ (american fuzzy lop) fuzzer tutorial
+- May 9: AFL++ (american fuzzy lop) fuzzer tutorial
 
 
 - May 9: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
