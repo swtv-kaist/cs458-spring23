@@ -120,7 +120,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 
 ### Part III: Automated Test Generation (Fuzzing and Concolic Testing (a.k.a., Dynamic Symbolic Execution))
-- May 2: [Modern fuzzing technique overview (i.e., coverage-guided automated blackbox testing)](3-fuzz-concolic/lec41-intro-to-fuzzing-v2.pptx) [[pdf]](3-fuzz-concolic/lec41-intro-to-fuzzing-v2.pdf) 
+- May 2: [Modern fuzzing technique overview (i.e., coverage-guided automated greybox testing)](3-fuzz-concolic/lec41-intro-to-fuzzing-v2.pptx) [[pdf]](3-fuzz-concolic/lec41-intro-to-fuzzing-v2.pdf) 
   - [The fuzzing book online class](https://www.fuzzingbook.org/)
   - [AFL++](https://github.com/AFLplusplus/AFLplusplus)
   - [OSS Fuzz](https://github.com/google/oss-fuzz)
