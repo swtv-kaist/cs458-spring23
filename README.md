@@ -2,6 +2,7 @@
 
 
 ## Announcement
+- May 15: From May 23, instead of having a separate makeup class, our class hour will be extended by 15 min (i.e., from 4 - 5:30 PM) for the remaining 5 lectures.
 - May 9: No class on May 9 (Tuesday). A make-up class schedule will be announced later.
 - April 25: No class on May 4 (Thursday). A make-up class schedule will be announced later.
 
