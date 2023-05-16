@@ -126,14 +126,14 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
   - [AFL++](https://github.com/AFLplusplus/AFLplusplus)
   - [OSS Fuzz](https://github.com/google/oss-fuzz)
   
-- May 4: No class
+- May 4, May 9: No class
 
-- May 9: [AFL++ (american fuzzy lop) fuzzer tutorial](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pptx) [[pdf]](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pdf)
+- May 11: [AFL++ (american fuzzy lop) fuzzer tutorial](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pptx) [[pdf]](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pdf)
   - [AFL++ document](https://github.com/AFLplusplus/AFLplusplus/tree/stable/docs)
 
+- May 16: [Intro to Libfuzzer](3-fuzz-concolic/lec40-greybox-fuzzing-v3.pptx) [[pdf]](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pdf)
 
-
-- May 9: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
+- May 18: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
 
 - May 11: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
