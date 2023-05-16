@@ -131,7 +131,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - May 11: [AFL++ (american fuzzy lop) fuzzer tutorial](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pptx) [[pdf]](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pdf)
   - [AFL++ document](https://github.com/AFLplusplus/AFLplusplus/tree/stable/docs)
 
-- May 16: [Intro to Libfuzzer](3-fuzz-concolic/lec40-greybox-fuzzing-v3.pptx) [[pdf]](3-fuzz-concolic/lec42-fuzzing_with_afl++-v3.pdf)
+- May 16: [Advanced Issues on Fuzzing](3-fuzz-concolic/lec40-greybox-fuzzing-v4.pptx) [[pdf]](3-fuzz-concolic/lec42-fuzzing_with_afl++-v4.pdf)
 
 - May 18: [Automated SW analysis for high reliability: a Concolic testing approach](3-fuzz-concolic/lec31-concolic-v5.pptx) [[pdf]](3-fuzz-concolic/lec31-concolic-v5.pdf)
   - Industrial Application of Concolic Testing on Embedded Software: Case Studies [ICSE'12 paper]
