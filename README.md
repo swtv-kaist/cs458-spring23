@@ -151,12 +151,11 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - May 25, 30: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
   - [crown_examples.zip](3-fuzz-concolic/code/crown_examples.zip)
 
-- May 30: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
-  - SMTlib examples
-  - Examples of First Order Theories [pdf] (for concolic testing, UML OCL, JML, pre/post condition verification, etc)
-  - Definition of "theory"
-  - CS402 Intro to Logic (Predicate Calculus - Semantics)
-  - SMT-competition 2022
+- May 30: [SMTlib tutorial](5-smt/lec40-smtlibV2-v6.pptx) [[pdf]](5-smt/lec40-smtlibV2-v6.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
+  - [SMTlib examples](5-smt/code/smtlib-v2.zip)
+  - [SMT-competition 2022](https://smt-comp.github.io/2022/)
+  - [CS402 Intro to Logic (Predicate Calculus - Semantics)](https://swtv.kaist.ac.kr/courses/CS402-2013)
+  
 
 - June 1: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
 
