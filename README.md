@@ -2,6 +2,7 @@
 
 
 ## Announcement
+- May 30: The last class on June 8 (Thurs) will be an offline class to prepare a final exam.
 - May 15: From May 23, instead of having a separate makeup class, our class hour will be extended by 15 min (i.e., from 4 - 5:30 PM) for the remaining 5 lectures.
 - May 9: No class on May 9 (Tuesday). A make-up class schedule will be announced later.
 - April 25: No class on May 4 (Thursday). A make-up class schedule will be announced later.
@@ -147,7 +148,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 - May 23, 25: [CROWN tutorial](3-fuzz-concolic/lec32-crown_tutorial-v3.pptx) [[pdf]](3-fuzz-concolic/lec32-crown_tutorial-v3.pdf)
   - [tutorial-examples](3-fuzz-concolic/code/tutorial-examples.zip)
 
-- May 25: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
+- May 25, 30: [CROWN Examples](3-fuzz-concolic/lec33-crown-Examples-v2.pptx) [[pdf]](3-fuzz-concolic/lec33-crown-Examples-v2.pdf) 
   - [crown_examples.zip](3-fuzz-concolic/code/crown_examples.zip)
 
 - May 30: [SMTlib tutorial](5-smt/lec40-smtlibV2-v5.pptx) [[pdf]](5-smt/lec40-smtlibV2-v5.pdf), [SMTLib web page](https://smtlib.cs.uiowa.edu/), [First order theories](5-smt/lec43-first-order-theories.pptx) [[pdf]](5-smt/lec43-first-order-theories.pdf)
@@ -161,7 +162,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - June 8: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
 
-- Online makeup class: Industrial case studies (pre-recorded movie clip)
+- Online makeup class: Industrial case studies (pre-recorded movie clip) (can be included in the final exam)
   - [Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing](3-fuzz-concolic/lec38-conbol.pptx) [[pdf]](3-fuzz-concolic/lec38-conbol.pdf)  [ASE'13 paper] [[Movie (40 min)]](https://drive.google.com/file/d/10DaVUtSZGJiHhHKe-abez7C3XuFQxoBx/view?usp=share_link)
   - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [[Movie (35min)]](https://drive.google.com/file/d/1G2j92qvfJBkPvIiBIklYE2EWjadEYIiW/view?usp=share_link)
 
@@ -173,5 +174,5 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 --->
 
 
-- **June 13:  Final exam (closed book)**
+- **June 13:  Final exam (closed book) 4:00-5:00 pm ** 
 
