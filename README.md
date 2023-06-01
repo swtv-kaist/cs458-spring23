@@ -2,6 +2,7 @@
 
 
 ## Announcement
+- Jun 1: An online makeup class material becomes available.
 - May 30: The last class on June 8 (Thurs) will be an offline class to prepare a final exam.
 - May 15: From May 23, instead of having a separate makeup class, our class hour will be extended by 15 min (i.e., from 4 - 5:30 PM) for the remaining 5 lectures.
 - May 9: No class on May 9 (Tuesday). A make-up class schedule will be announced later.
@@ -159,11 +160,12 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 
 - June 1: [System-level concolic testing: Busybox application examples through CROWN](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pptx) [[pdf]](3-fuzz-concolic/lec35-printf-grep-vi-system-testing-v3.pdf)
 
-- June 8: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
 
 - Online makeup class: Industrial case studies (pre-recorded movie clip) (can be included in the final exam)
   - [Automated Unit Testing of Large Industrial Embedded Software using Concolic Testing](3-fuzz-concolic/lec38-conbol.pptx) [[pdf]](3-fuzz-concolic/lec38-conbol.pdf)  [ASE'13 paper] [[Movie (40 min)]](https://drive.google.com/file/d/10DaVUtSZGJiHhHKe-abez7C3XuFQxoBx/view?usp=share_link)
   - [Concolic Testing for High Test Coverage and Reduced Human Effort in Automotive Industry](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pptx) [[pdf]](3-fuzz-concolic/lec39-ICSE19-MAIST-rev18.pdf)  [ICSE'19 paper] [[Movie (35min)]](https://drive.google.com/file/d/1G2j92qvfJBkPvIiBIklYE2EWjadEYIiW/view?usp=share_link)
+
+- June 8: [Automated unit testing](3-fuzz-concolic/lec36.automated_unit_testing-v2.pptx) [[pdf]](3-fuzz-concolic/lec36.automated_unit_testing-v2.pdf), [Unit-level concolic testing: Busybox ls example](3-fuzz-concolic/lec37-ls-unit-testing-v4.pptx) [[pdf]](3-fuzz-concolic/lec37-ls-unit-testing-v4.pdf)
 
 <!---
 ### Part IV: Testing/Verification Engine - SAT/SMT Solver
