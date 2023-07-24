@@ -46,9 +46,11 @@
 - Questions on the course materials and homeworks should be posted as github issues 
   - https://github.com/swtv-kaist/cs458-spring23/issues 
 
-- Excerpts from 강의평가
-    - "실질적으로 써먹을 수 있는 내용을 많이 배워서 보람찼습니다"
-    - "과제가 많이 어려운것 같았다. 과제에 대한 도움을 수업에서 좀 더 주었으면 좋겠다."
+- Excerpts from 강의평가 (4.92 out of 5 in Spring 23)
+    
+    - "이번 학기에 졸업하는데, 지금까지 들은 과목 중 가장 재미있고 실용적이었던 것 같아요! 과제도 이전 평에 비해 너무 어렵지 않고 딱 적당했던 것 같습니다."  
+    - "테스팅에 대해 많이 배워갈 수 있었습니다. 과제가 많긴 하지만 다 도움이 되는 것 같습니다. 감사합니다."
+    - "먼저, 좋은 강의 해주셔서 진심으로 감사합니다. 본 강의를 통해 전반적인 테스팅 기법들에 대해 알 수 있었던 것 같습니다. 특히, fuzzing, concolic testing, SMT solver 등 실질적으로 써먹을 수 있는 기법들을 실습과 병행해서 잘 배울 수 있었던 것 같습니다... 이번 학기 가장 많은 것을 얻은 과목이라고 자부합니다. 교수님께서 학생들에게 진심을 다해 강의해주시는 모습을 보며 큰 동기부여가 되었고, 많은 지식을 습득할 수 있었던 것 같습니다. 항상 감사합니다."
     
 - [Online exam instruction for students w/ COVID-19](online-exam-instructions-v2.pdf)
 
