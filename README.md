@@ -46,7 +46,7 @@
 - Questions on the course materials and homeworks should be posted as github issues 
   - https://github.com/swtv-kaist/cs458-spring23/issues 
 
-- Excerpts from 강의평가 (4.92 out of 5 in Spring 23)
+- Excerpts from 강의평가 (4.93 out of 5 in Spring 23)
     
     - "이번 학기에 졸업하는데, 지금까지 들은 과목 중 가장 재미있고 실용적이었던 것 같아요! 과제도 이전 평에 비해 너무 어렵지 않고 딱 적당했던 것 같습니다."  
     - "테스팅에 대해 많이 배워갈 수 있었습니다. 과제가 많긴 하지만 다 도움이 되는 것 같습니다. 감사합니다."
