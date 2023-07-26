@@ -27,7 +27,7 @@
 
 - Prerequisite: proficiency in C/C++ programming and Linux utilities
   - Due to the high load of TA, TA will not provide help for basic C/C++/Linux questions.
-  - Highly recommend to take CS458 after taking CS230 System Programming first
+  <!-- hly recommend to take CS458 after taking CS230 System Programming first -->
   
 - Grading: attendance/class participation/quiz: 20%, HW: 50%, mid/final exams:30%
   - You should turn on your web cam when you participate an online class; class attendance will not be counted otherwise.
@@ -37,8 +37,8 @@
 
 - Homework:
   - Homework should be submitted through KLMS https://klms.kaist.ac.kr/course/view.php?id=145058
-  - Late HW will be accepted with 10% penalty of the max score in 1 day, 30% penalty of the max score in 3 days. HW will not be accepted after then.
     - Hint: many questions of exams are from the homeworks.
+  - Late HW will be accepted with 10% penalty of the max score in 1 day, 30% penalty of the max score in 3 days. HW will not be accepted after then.
   - All programming HWs you submit must be able to be replayed by executing a single script file on a TA's server account (i.e., submitted HW should not have a dependency on your home directory, environment, etc.).  Also, the replayed execution must demonstrate the same output to the submitted hw. You will get 10% penalty of the max score otherwise.
   - For your programming HWs, you should not use external libraries which are not available on the server machines.  If you really need an external library, you have to ask TAs to install it on the server machines.
   - Please, include your student ID in the name of your submiited file(s), so that TAs can easily identify which files are yours.
@@ -177,5 +177,5 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
 --->
 
 
-- **June 13:  Final exam (closed book) 4:00-5:00 pm ** 
+- **Dec 14:  Final exam (closed book) 5:30-7:00 pm ** 
 
