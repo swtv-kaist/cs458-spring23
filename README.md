@@ -27,6 +27,7 @@
 
 - Prerequisite: CS230 System Programming, proficiency in C/C++ programming and Linux utilities
   - Due to the high load of TA, TA will not provide help for basic C/C++/Linux questions.
+  - This class can be difficult to follow for exchange students.
   <!-- hly recommend to take CS458 after taking CS230 System Programming first -->
   
 - Grading: attendance/class participation/quiz: 20%, HW: 50%, mid/final exams:30%
