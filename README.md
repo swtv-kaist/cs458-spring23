@@ -25,7 +25,7 @@
   - a face-to-face lecture on Tues and an online lecture on Thurs (this plan may change later) 
   - Zoom link for Thurs class: https://kaist.zoom.us/j/5258253316
 
-- Prerequisite: proficiency in C/C++ programming and Linux utilities
+- Prerequisite: CS230 System Programming, proficiency in C/C++ programming and Linux utilities
   - Due to the high load of TA, TA will not provide help for basic C/C++/Linux questions.
   <!-- hly recommend to take CS458 after taking CS230 System Programming first -->
   
