@@ -97,7 +97,7 @@ IEEE Trans. on Software Engineering vol. 35, no. 3, pp. 407-429, May-June 2009.
      - Understand C++ (https://scitools.com)  (free academic version available)
      - Source Insight (https://www.sourceinsight.com/)
 
-- Mar 23: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v5.pptx) [[pdf]](2-coverage/lec6-gcov-llvm-cov-v5.pdf)  
+- Mar 23: [gcov tutorial](2-coverage/lec6-gcov-llvm-cov-v6.pptx) [[pdf]](2-coverage/lec6-gcov-llvm-cov-v6.pdf)  
    - [gcc manual](https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html), [gcov manual](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)
      
 
