@@ -1,6 +1,4 @@
-# KAIST CS458 Dynamic Analysis of Software Source Code (Spring'23)
-# 소프트웨어 소스 코드 기반 동적 분석
-
+# KAIST CS458 Dynamic Analysis of Software Source Code (소프트웨어 소스 코드 기반 동적 분석) Spring'23
 
 ## Announcement
 - Jun 1: An online makeup class material becomes available.
